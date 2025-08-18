@@ -1,0 +1,133 @@
+/* Nền gradient tím-xanh */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at 20% 20%, #6a11cb 0%, #2575fc 100%);
+  overflow: hidden;
+   background: url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+
+  overflow: hidden;
+
+}
+
+/* Container */
+.container {
+  width: 380px;
+  max-width: 92vw;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.075 );
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.form-desc {
+  font-size: 14px;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+/* Nút social */
+.social-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-social {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-google { background: #db4437; }
+.btn-fb { background: #4267B2; }
+
+/* Hoặc với email */
+.or {
+  margin: 15px 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Input */
+.field {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  outline: none;
+}
+.field::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+/* Nút chính */
+.btn-main {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.08s ease;
+}
+.btn-main:active {
+  transform: scale(0.98);
+}
+
+/* Nút quay lại */
+.btn-back {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #b9c512;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn-back:active {
+  transform: scale(0.98);
+}
+
+/* Link phụ */
+.links {
+  margin-top: 15px;
+  font-size: 13px;
+}
+.links a {
+  color: #d1d5db;
+  text-decoration: none;
+}
+.links a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<script src="app.js"></script>
+<body>
+
+<div class="container">
+
+  <!-- Form Đăng nhập -->
+  <div id="loginForm" class="form">
+  
+
+    <h1>Đăng nhập tài khoản</h1>
+    
+    <div class="social-buttons">
+      <a href="https://login-backend-96fl.onrender.com/auth/google" class="btn-social btn-google">Google</a>
+      <a href="https://login-backend-96fl.onrender.com/auth/facebook" class="btn-social btn-fb">Facebook</a>
+    </div>
+
+    <div class="or">hoặc tiếp tục với email</div>
+
+    <input type="email" class="field" id="loginEmail" placeholder="Email">
+    <input type="password" class="field" id="loginPassword" placeholder="Mật khẩu">
+    <div id="loginMsg" class="msg"></div>
+    <button class="btn-main" type="submit">Đăng nhập</button>
+
+
+    <div class="links">
+      <a href="#" id="forgotPassword">Quên mật khẩu?</a><br>
+      Chưa có tài khoản? <a href="#" id="createAccount">Tạo tài khoản</a>
+    </div>
+  </div>
+
+  <!-- Form Quên mật khẩu -->
+  <div id="forgotForm" class="form" style="display:none;">
+    <h1>Đặt lại mật khẩu</h1>
+    <p class="form-desc">Nhập email của bạn và chúng tôi sẽ gửi cho bạn hướng dẫn đặt lại mật khẩu.</p>
+    <input type="email" class="field" placeholder="Your Email">
+    <button class="btn-main">Gửi liên kết đặt lại mật khẩu</button>
+    <button class="btn-back" id="backToLogin1">⬅ Quay lại</button>
+  </div>
+
+  <!-- Form Đăng ký -->
+  <div id="registerForm" class="form" style="display:none;">
+    <h1>Tạo tài khoản</h1>
+    <input type="text" class="field" id="regName" placeholder="Full Name">
+    <input type="email" class="field" id="regEmail" placeholder="Email">
+    <input type="password" class="field" id="regPassword" placeholder="Password">
+    <div id="regMsg" class="msg"></div>
+    <button class="btn-main" type="submit">Đăng kí</button>
+
+    <button class="btn-back" id="backToLogin2">⬅Quay lại</button>
+  </div>
+
+</div>
+
+<script>
+  const loginForm = document.getElementById('loginForm');
+  const forgotForm = document.getElementById('forgotForm');
+  const registerForm = document.getElementById('registerForm');
+
+  document.getElementById('forgotPassword').addEventListener('click', function(e){
+    e.preventDefault();
+    loginForm.style.display = 'none';
+    forgotForm.style.display = 'block';
+  });
+
+  document.getElementById('createAccount').addEventListener('click', function(e){
+    e.preventDefault();
+    loginForm.style.display = 'none';
+    registerForm.style.display = 'block';
+  });
+
+  document.getElementById('backToLogin1').addEventListener('click', function(){
+    forgotForm.style.display = 'none';
+    loginForm.style.display = 'block';
+  });
+
+  document.getElementById('backToLogin2').addEventListener('click', function(){
+    registerForm.style.display = 'none';
+    loginForm.style.display = 'block';
+  });
+</script>
+<div id="msg" class="msg"></div>
+
+
+</body>
+</html>
