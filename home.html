@@ -1,83 +1,93 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mediverse - Trang chủ</title>
-  <link rel="stylesheet" href="home.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
 </head>
+<script src="app.js"></script>
 <body>
 
-  <header>
-    <div class="logo">MEDIVERSE</div>
-    <nav>
-      <a href="#">Trang chủ</a>
-      <a href="#">Cộng đồng</a>
-      <a href="#">Hồ sơ y tế</a>
-      <a href="#">Tư vấn</a>
-      <a href="#" id="loginBtn" class="login-btn">Đăng nhập / Đăng ký</a>
-      <div id="userProfile" style="display: none;">
-        <img id="avatar" src="default-avatar.png" alt="avatar">
-        <span id="pName">Tên người dùng</span>
-        <button id="logoutBtn">Đăng xuất</button>
-      </div>
-    </nav>
-  </header>
+<div class="container">
 
-  <section class="hero">
-    <div class="left">
-      <h1>Sức khỏe trong tầm tay bạn</h1>
-      <p>Giải pháp y tế toàn diện, kết nối bác sĩ, bệnh nhân và cộng đồng</p>
-      <div class="buttons">
-        <button>Khám ngay</button>
-        <button>Trò chuyện với AI</button>
-      </div>
+  <!-- Form Đăng nhập -->
+  <div id="loginForm" class="form">
+  
+
+    <h1>Đăng nhập tài khoản</h1>
+    
+    <div class="social-buttons">
+      <a href="https://login-backend-96fl.onrender.com/auth/google" class="btn-social btn-google">Google</a>
+      <a href="https://login-backend-96fl.onrender.com/auth/facebook" class="btn-social btn-fb">Facebook</a>
     </div>
-    <div class="right">
-      <img src="doctor.png" alt="Minh họa bác sĩ và bệnh nhân">
+
+    <div class="or">hoặc tiếp tục với email</div>
+
+    <input type="email" class="field" id="loginEmail" placeholder="Email">
+    <input type="password" class="field" id="loginPassword" placeholder="Mật khẩu">
+    <div id="loginMsg" class="msg"></div>
+    <button class="btn-main" type="submit">Đăng nhập</button>
+
+
+    <div class="links">
+      <a href="#" id="forgotPassword">Quên mật khẩu?</a><br>
+      Chưa có tài khoản? <a href="#" id="createAccount">Tạo tài khoản</a>
     </div>
-  </section>
+  </div>
 
-  <script>
-    // Nếu chưa đăng nhập → chuyển sang trang login khi nhấn nút
-    document.getElementById('loginBtn').addEventListener('click', () => {
-      window.location.href = 'index.html';
-    });
+  <!-- Form Quên mật khẩu -->
+  <div id="forgotForm" class="form" style="display:none;">
+    <h1>Đặt lại mật khẩu</h1>
+    <p class="form-desc">Nhập email của bạn và chúng tôi sẽ gửi cho bạn hướng dẫn đặt lại mật khẩu.</p>
+    <input type="email" class="field" placeholder="Your Email">
+    <button class="btn-main">Gửi liên kết đặt lại mật khẩu</button>
+    <button class="btn-back" id="backToLogin1">⬅ Quay lại</button>
+  </div>
 
-    // Load thông tin user nếu đã login
-    async function loadProfile() {
-      try {
-        const res = await fetch("https://login-backend-96fl.onrender.com/profile", {
-          credentials: "include"
-        });
-        if (!res.ok) return;
+  <!-- Form Đăng ký -->
+  <div id="registerForm" class="form" style="display:none;">
+    <h1>Tạo tài khoản</h1>
+    <input type="text" class="field" id="regName" placeholder="Full Name">
+    <input type="email" class="field" id="regEmail" placeholder="Email">
+    <input type="password" class="field" id="regPassword" placeholder="Password">
+    <div id="regMsg" class="msg"></div>
+    <button class="btn-main" type="submit">Đăng kí</button>
 
-        const data = await res.json();
-        const user = data.user || {};
+    <button class="btn-back" id="backToLogin2">⬅Quay lại</button>
+  </div>
 
-        // Cập nhật giao diện
-        document.getElementById("pName").textContent = user.name || "Người dùng";
-        document.getElementById("avatar").src =
-          user.photos?.[0]?.value || "default-avatar.png";
+</div>
 
-        document.getElementById("loginBtn").style.display = "none";
-        document.getElementById("userProfile").style.display = "flex";
-      } catch (err) {
-        console.error("Lỗi khi tải hồ sơ:", err);
-      }
-    }
+<script>
+  const loginForm = document.getElementById('loginForm');
+  const forgotForm = document.getElementById('forgotForm');
+  const registerForm = document.getElementById('registerForm');
 
-    // Logout
-    document.getElementById("logoutBtn").addEventListener("click", async () => {
-      await fetch("https://login-backend-96fl.onrender.com/logout", {
-        credentials: "include"
-      });
-      location.reload();
-    });
+  document.getElementById('forgotPassword').addEventListener('click', function(e){
+    e.preventDefault();
+    loginForm.style.display = 'none';
+    forgotForm.style.display = 'block';
+  });
 
-    // Gọi khi vừa vào trang
-    loadProfile();
-  </script>
+  document.getElementById('createAccount').addEventListener('click', function(e){
+    e.preventDefault();
+    loginForm.style.display = 'none';
+    registerForm.style.display = 'block';
+  });
+
+  document.getElementById('backToLogin1').addEventListener('click', function(){
+    forgotForm.style.display = 'none';
+    loginForm.style.display = 'block';
+  });
+
+  document.getElementById('backToLogin2').addEventListener('click', function(){
+    registerForm.style.display = 'none';
+    loginForm.style.display = 'block';
+  });
+</script>
+<div id="msg" class="msg"></div>
+
 
 </body>
 </html>
