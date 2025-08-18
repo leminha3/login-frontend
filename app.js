@@ -47,7 +47,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     showMsg(msg, resp.message || 'Đăng nhập thành công!');
     await loadProfile();
     // Sau khi đăng nhập thành công
-    window.location.href = "home.html";
+    window.location.href = "conkhi.html";
 
   } catch (err) {
     showMsg(msg, err.error || 'Đăng nhập thất bại', true);
@@ -92,7 +92,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
     showMsg(msg, resp.message || 'Đăng ký thành công!');
     
     // Sau khi đăng ký thành công → chuyển sang trang home
-    window.location.href = "home.html";
+    window.location.href = "conkhi.html";
 
   } catch (err) {
     showMsg(msg, err.error || 'Đăng ký thất bại', true);
