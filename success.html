@@ -1,15 +1,169 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Đăng nhập thành công</title>
-  <link rel="stylesheet" href="success.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mediverse - Trang chủ</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f9ff;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 20px 40px;
+      border-bottom: 1px solid #ddd;
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #2575fc;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px;
+      background-color: white;
+    }
+    .hero .left {
+      max-width: 50%;
+    }
+    .hero h1 {
+      font-size: 32px;
+      color: #222;
+    }
+    .hero p {
+      font-size: 16px;
+      color: #555;
+    }
+    .buttons button {
+      margin-right: 10px;
+      padding: 10px 20px;
+      background-color: #2575fc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .hero .right img {
+      max-width: 300px;
+    }
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px 40px;
+      background-color: white;
+    }
+    .feature-box {
+      background: #f0f4ff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 20%;
+      cursor: pointer;
+    }
+    .news-section {
+      padding: 40px;
+      background-color: white;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .news-card {
+      background: #e6ecfc;
+      padding: 20px;
+      border-radius: 10px;
+      color: black;
+      text-decoration: none;
+    }
+    .footer {
+      background-color: #2575fc;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 40px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <img src="conkhi.png" alt="Hình chúc mừng" class="success-img">
-    <h1>Đăng nhập / Đăng ký thành công!</h1>
-  </div>
+  <header>
+    <div class="logo">MEDIVERSE</div>
+    <nav>
+      <a href="index.html">Trang chủ</a>
+      <a href="#">Cộng đồng</a>
+      <a href="#">Hồ sơ y tế</a>
+      <a href="#">Tư vấn</a>
+      <a href="#">Liên hệ</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="left">
+      <h1>Sức khỏe trong tầm tay bạn</h1>
+      <p>Giải pháp y tế toàn diện, kết nối bác sĩ, bệnh nhân và cộng đồng</p>
+      <div class="buttons">
+        <button onclick="location.href='1.html'">Khám ngay</button>
+        <button onclick="location.href='2.html'">Trò chuyện với AI</button>
+      </div>
+    </div>
+    <div class="right">
+      <img src="doctor.png" alt="Minh họa bác sĩ và bệnh nhân">
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-box" onclick="location.href='3.html'">Cộng đồng</div>
+    <div class="feature-box" onclick="location.href='4.html'">Mua thuốc</div>
+    <div class="feature-box" onclick="location.href='5.html'">Hồ sơ y tế</div>
+    <div class="feature-box" onclick="location.href='6.html'">Tư vấn</div>
+  </section>
+
+  <section class="news-section">
+    <h2>Tin tức & Bài viết mới nhất</h2>
+    <div class="news-grid">
+      <a href="https://giaan115.com/5-dau-hieu-benh-tieu-duong" class="news-card">
+        <div>5 dấu hiệu cảnh báo bệnh tiểu đường bạn không nên bỏ qua</div>
+        <small>10/08/2025</small>
+      </a>
+      <a href="https://vbee.vn/blog/ai/ung-dung-ai-trong-y-te/?utm_source=BL&utm_medium=CPC&utm_term=Vietnam&utm_campaign=SM_GG_DU_NBR_AS_A_VN_B_UNK_UNK&gad_source=1&gad_campaignid=21793655902&gclid=Cj0KCQjw_L_FBhDmARIsAItqgt6I0l5CuzfJchz50ALGuwCKmmReJl1UpCjGMjgPlIwtR0TZiChqQksaAmhZEALw_wcB" class="news-card">
+        <div>Công nghệ AI đang thay đổi ngành y tế như thế nào?</div>
+        <small>07/08/2025</small>
+      </a>
+      <a href="https://www.zespri.com/vi-VN/blogdetail/tang-cuong-de-khang-va-suc-khoe-tinh-than-bang-vitamin-c-tu-hoa-qua?utm_source=Google&utm_medium=Paid-Search&utm_campaign=Summer_VN_Traffic&utm_content=SEM&utm_term=Not-Applicable_F_NA_Interest_SEM_Search_Text_Custom_1X1_SEM&gad_source=1" class="news-card">
+        <div>Chế độ ăn uống giúp tăng sức đề kháng mùa dịch</div>
+        <small>01/08/2025</small>
+      </a>
+      <a href="https://bidv.com.vn/bidv/tin-tuc/tin-ve-bidv/ra-mat-tinh-nang-chatbot-ho-tro-khach-hang-doanh-nghiep-tren-bidv-ibank" class="news-card">
+        <div>Mediverse ra mắt tính năng Chatbot AI hỗ trợ tư vấn 24/7</div>
+        <small>01/08/2025</small>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <strong>MEDIVERSE</strong><br>
+      Mediverse là nền tảng y tế trực tuyến giúp kết nối bác sĩ, bệnh nhân và cộng đồng để chăm sóc sức khỏe toàn diện.
+    </div>
+    <div>
+      <strong>Liên hệ</strong><br>
+      📞 29812374198237<br>
+      📧 katgen2@gmail.com
+    </div>
+  </footer>
 </body>
 </html>
