@@ -5,41 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mediverse - Trang chủ</title>
   <link rel="stylesheet" href="home.css" />
-   <header>
+</head>
+<body>
+  <header class="main-header">
     <div class="logo">MEDIVERSE</div>
-    <nav>
+    <nav class="nav-links">
       <a href="#">Trang chủ</a>
       <a href="#">Cộng đồng</a>
       <a href="#">Hồ sơ y tế</a>
       <a href="#">Tư vấn</a>
+    </nav>
+    <div class="user-area">
       <a href="#" id="loginBtn" class="login-btn">Đăng nhập / Đăng ký</a>
-      <div id="userProfile" style="display: none;">
+      <div id="userProfile" style="display: none;" class="profile">
         <img id="avatar" src="default-avatar.png" alt="avatar">
         <span id="pName">Tên người dùng</span>
         <button id="logoutBtn">Đăng xuất</button>
       </div>
-    </nav>
+    </div>
   </header>
 
   <section class="hero">
-    <div class="left">
+    <div class="hero-left">
       <h1>Sức khỏe trong tầm tay bạn</h1>
       <p>Giải pháp y tế toàn diện, kết nối bác sĩ, bệnh nhân và cộng đồng</p>
       <div class="buttons">
         <button>Khám ngay</button>
         <button>Trò chuyện với AI</button>
       </div>
-       <div class="right">
+    </div>
+    <div class="hero-right">
       <img src="doctor.png" alt="Minh họa bác sĩ và bệnh nhân">
-       </section>
+    </div>
+  </section>
 
   <script>
-    // Nếu chưa đăng nhập → chuyển sang trang login khi nhấn nút
     document.getElementById('loginBtn').addEventListener('click', () => {
       window.location.href = 'home.html';
     });
 
-    // Load thông tin user nếu đã login
     async function loadProfile() {
       try {
         const res = await fetch("https://login-backend-96fl.onrender.com/profile", {
@@ -50,7 +54,6 @@
         const data = await res.json();
         const user = data.user || {};
 
-        // Cập nhật giao diện
         document.getElementById("pName").textContent = user.name || "Người dùng";
         document.getElementById("avatar").src =
           user.photos?.[0]?.value || "default-avatar.png";
@@ -62,7 +65,6 @@
       }
     }
 
-    // Logout
     document.getElementById("logoutBtn").addEventListener("click", async () => {
       await fetch("https://login-backend-96fl.onrender.com/logout", {
         credentials: "include"
@@ -70,8 +72,7 @@
       location.reload();
     });
 
-    // Gọi khi vừa vào trang
     loadProfile();
   </script>
-  </body>
+</body>
 </html>

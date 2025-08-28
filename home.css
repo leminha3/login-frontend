@@ -1,44 +1,63 @@
-body {
+/* RESET */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f3f4f6;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header {
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f9fc;
+  color: #333;
+}
+
+header.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
 }
 
 .logo {
+  font-size: 24px;
   font-weight: bold;
-  font-size: 22px;
-  color: #007BFF;
+  color: #1A73E8;
 }
 
-nav a {
-  margin-left: 20px;
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
   text-decoration: none;
   color: #333;
+  font-weight: 500;
 }
 
-.login-btn {
-  background-color: #007BFF;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 6px;
-}
-
-#userProfile {
+.user-area {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-#userProfile img {
+.login-btn {
+  background-color: #1A73E8;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -47,33 +66,39 @@ nav a {
 .hero {
   display: flex;
   justify-content: space-between;
-  padding: 60px;
+  align-items: center;
+  padding: 60px 40px;
+  gap: 40px;
 }
 
-.hero .left {
+.hero-left {
   max-width: 50%;
 }
 
-.hero h1 {
+.hero-left h1 {
   font-size: 36px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  color: #1A73E8;
 }
 
-.hero p {
+.hero-left p {
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  color: #555;
 }
 
 .buttons button {
-  padding: 10px 20px;
+  padding: 12px 24px;
+  font-size: 16px;
   margin-right: 10px;
-  background: #007BFF;
-  color: white;
   border: none;
   border-radius: 6px;
+  background-color: #1A73E8;
+  color: white;
   cursor: pointer;
 }
 
-.right img {
-  width: 350px;
+.hero-right img {
+  max-width: 100%;
+  height: auto;
 }
