@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mediverse - Trang chủ</title>
   <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
   <header class="main-header">
@@ -14,9 +15,10 @@
       <a href="#">Cộng đồng</a>
       <a href="#">Hồ sơ y tế</a>
       <a href="#">Tư vấn</a>
+      <a href="#">Liên hệ</a>
     </nav>
     <div class="user-area">
-      <a href="#" id="loginBtn" class="login-btn">Đăng nhập / Đăng ký</a>
+      <i id="loginBtn" class="fas fa-user-circle fa-2x login-icon"></i>
       <div id="userProfile" style="display: none;" class="profile">
         <img id="avatar" src="default-avatar.png" alt="avatar">
         <span id="pName">Tên người dùng</span>
@@ -27,7 +29,7 @@
 
   <section class="hero">
     <div class="hero-left">
-      <h1>Sức khỏe trong tầm tay bạn</h1>
+      <h1>Sức khoẻ trong tầm tay bạn</h1>
       <p>Giải pháp y tế toàn diện, kết nối bác sĩ, bệnh nhân và cộng đồng</p>
       <div class="buttons">
         <button>Khám ngay</button>
@@ -38,6 +40,73 @@
       <img src="doctor.png" alt="Minh họa bác sĩ và bệnh nhân">
     </div>
   </section>
+
+  <section class="features">
+    <div class="feature-box">
+      <i class="fas fa-users"></i>
+      <h3>Cộng đồng</h3>
+      <p>Chia sẻ & học hỏi từ cộng đồng chăm sóc sức khoẻ</p>
+    </div>
+    <div class="feature-box">
+      <i class="fas fa-pills"></i>
+      <h3>Mua thuốc</h3>
+      <p>Đặt thuốc trực tuyến nhanh chóng, tiện lợi</p>
+    </div>
+    <div class="feature-box">
+      <i class="fas fa-file-medical"></i>
+      <h3>Hồ sơ y tế</h3>
+      <p>Quản lý bệnh án an toàn, bảo mật</p>
+    </div>
+    <div class="feature-box">
+      <i class="fas fa-comments"></i>
+      <h3>Tư vấn</h3>
+      <p>Hỗ trợ sức khoẻ từ bác sĩ 24/7</p>
+    </div>
+  </section>
+
+  <section class="news">
+    <h2>Tin tức & Bài viết mới nhất</h2>
+    <div class="news-list">
+      <div class="news-card">
+        <div class="image-placeholder"></div>
+        <p>5 dấu hiệu cảnh báo bệnh tiểu đường bạn không nên bỏ qua</p>
+        <span>01/08/2025</span>
+      </div>
+      <div class="news-card">
+        <div class="image-placeholder"></div>
+        <p>Công nghệ AI đang thay đổi ngành y như thế nào?</p>
+        <span>07/08/2025</span>
+      </div>
+      <div class="news-card">
+        <div class="image-placeholder"></div>
+        <p>Chế độ ăn uống giúp tăng sức đề kháng mùa dịch</p>
+        <span>08/08/2025</span>
+      </div>
+      <div class="news-card">
+        <div class="image-placeholder"></div>
+        <p>Mediverse ra mắt tính năng Chatbot AI hỗ trợ tư vấn 24/7</p>
+        <span>09/08/2025</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-left">
+      <h3>MEDIVERSE</h3>
+      <p>
+        Mediverse là nền tảng y tế trực tuyến giúp kết nối bác sĩ, bệnh nhân và cộng đồng dễ dàng, mọi lúc, mọi nơi.
+      </p>
+    </div>
+    <div class="footer-center">
+      <p>📞 036363636</p>
+      <p>📧 kimlien@gmail.com</p>
+    </div>
+    <div class="footer-right">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
 
   <script>
     document.getElementById('loginBtn').addEventListener('click', () => {
