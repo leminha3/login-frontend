@@ -135,8 +135,8 @@ header.main-header {
   width: 250px;
   text-align: center;
   padding: 20px;
-  box-shadow: 1px 1px 10px #bdbdbd;
-  border-radius: 20px;
+  box-shadow: 1px 1px 10px #cccccc;
+  border-radius: 8px;
 }
 
 .feature-box i {
