@@ -29,8 +29,7 @@ body {
   height: 80px;
   border-radius: 50%;
   margin: 20px 0 10px;
-  text-align: center;
-}
+  ;}
 
 .avatar-container {
   text-align: center; /* Căn giữa avatar trong container */
