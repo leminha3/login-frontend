@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f7fc;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: white;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 18px;
+  color: #2b5bd7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 20px 0 10px;
+  ;}
+
+.avatar-container {
+  text-align: center; /* Căn giữa avatar trong container */
+  margin-top: 20px;
+}
+
+.avatar-container img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto; /* Đưa ảnh vào giữa */
+}
+
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  display: block;
+  border-radius: 8px;
+}
+
+.sidebar nav ul li a.active,
+.sidebar nav ul li a:hover {
+  background-color: #eaf0ff;
+  color: #2b5bd7;
+}
+
+/* Main Content */
+.content {
+  flex: 1;
+  padding: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* History Section */
+.search {
+  padding: 8px;
+  width: 300px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+}
+
+.history-list li {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+button {
+  background-color: #2b5bd7;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hide inactive content */
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+.username {
+  font-weight: 700;
+  margin-top: 10px;
+  text-align: center;
+}

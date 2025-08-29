@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hồ sơ cá nhân</title>
+  <link rel="stylesheet" href="user.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2><a href="success.html" class="logo">MEDIVERSE</a></h2>
+      <img src="default-avatar.png" alt="Avatar" class="avatar">
+      <div class="username">Phạm Sorange</div>
+      <nav>
+        <ul>
+          <li><a href="#" class="tab-link active" data-tab="personal">Thông tin cá nhân</a></li>
+          <li><a href="#" class="tab-link" data-tab="health">Thông tin y tế</a></li>
+          <li><a href="#" class="tab-link" data-tab="history">Lịch sử khám</a></li>
+          <li><a href="#" class="tab-link" data-tab="settings">Thiết lập</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <!-- Thông tin cá nhân -->
+      <section id="personal" class="tab-content active">
+        <div class="card">
+          <h3>Thông tin cá nhân</h3>
+          <p><strong>Họ và tên:</strong> Phạm Sorange</p>
+          <p><strong>Giới tính:</strong> Nam</p>
+          <p><strong>Ngày sinh:</strong> 01/01/2008</p>
+          <p><strong>Email/SĐT:</strong> +84123456789</p>
+        </div>
+      </section>
+
+      <!-- Thông tin y tế -->
+      <section id="health" class="tab-content">
+        <div class="card">
+          <h3>Thông tin y tế tổng hợp</h3>
+          <p><strong>Nhóm máu:</strong> O+</p>
+          <p><strong>Chiều cao:</strong> 174 cm</p>
+          <p><strong>Cân nặng:</strong> 58 kg</p>
+          <p><strong>BMI:</strong> 19.2</p>
+          <p><strong>Tiền sử bệnh:</strong> Không có</p>
+          <p><strong>Phẫu thuật:</strong> Không có</p>
+          <p><strong>Thuốc đang sử dụng:</strong> Không</p>
+        </div>
+      </section>
+
+      <!-- Lịch sử khám -->
+      <section id="history" class="tab-content">
+        <div class="card">
+          <h3>Lịch sử khám</h3>
+          <input type="text" placeholder="Tìm kiếm..." class="search">
+          <ul class="history-list">
+            <li>
+              <p><strong>15/07/2025 – Bệnh viện A</strong></p>
+              <p>BS. Nguyễn Văn A - Nội tổng quát</p>
+              <p>Viêm họng cấp - kê kháng sinh 5 ngày</p>
+              <button>Xem chi tiết</button>
+            </li>
+            <li>
+              <p><strong>20/03/2025 – Phòng khám B</strong></p>
+              <p>BS. Lê Thị B - Da liễu</p>
+              <p>Không phát hiện bất thường</p>
+              <button>Xem chi tiết</button>
+            </li>
+            <li>
+              <p><strong>9/01/2025 – Phòng khám C</strong></p>
+              <p>BS. Lê Thị C - Da liễu</p>
+              <p>Không phát hiện bất thường</p>
+              <button>Xem chi tiết</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Thiết lập -->
+      <section id="settings" class="tab-content">
+        <div class="card">
+          <h3>Thiết lập</h3>
+          <p>Đây là phần để bạn thay đổi mật khẩu, email, bảo mật...</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const tabLinks = document.querySelectorAll(".tab-link");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        tabLinks.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+
+        const target = this.getAttribute("data-tab");
+        tabContents.forEach(content => {
+          content.classList.remove("active");
+        });
+        document.getElementById(target).classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
