@@ -31,11 +31,20 @@ body {
   margin: 20px 0 10px;
 }
 
-.username {
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 20px;
+.avatar-container {
+  text-align: center; /* Căn giữa avatar trong container */
+  margin-top: 20px;
 }
+
+.avatar-container img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto; /* Đưa ảnh vào giữa */
+}
+
 
 .sidebar nav ul {
   list-style: none;
