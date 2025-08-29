@@ -122,3 +122,7 @@ button {
 .tab-content.active {
   display: block;
 }
+.username {
+  font-weight: bold;
+  text-align: center;
+}
