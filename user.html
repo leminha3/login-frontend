@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hồ sơ cá nhân - Mediverse</title>
+  <link rel="stylesheet" href="user.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">MEDIVERSE</div>
+      <div class="avatar">
+        <img src="default-avatar.png" alt="Avatar">
+        <p class="username">Phạm Sorange</p>
+      </div>
+      <nav>
+        <a href="#" class="active"><i class="fas fa-user"></i> Thông tin cá nhân</a>
+        <a href="#"><i class="fas fa-heartbeat"></i> Thông tin y tế</a>
+        <a href="#"><i class="fas fa-calendar-alt"></i> Lịch sử khám</a>
+        <a href="#"><i class="fas fa-cog"></i> Thiết lập</a>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="profile-content">
+      <div class="header-row">
+        <h2>Phạm Sorange</h2>
+        <div class="actions">
+          <button><i class="fas fa-share-alt"></i> Chia sẻ hồ sơ</button>
+          <button><i class="fas fa-folder-open"></i> Quản lý hồ sơ</button>
+        </div>
+      </div>
+
+      <!-- Section 1: Thông tin cá nhân -->
+      <section class="card">
+        <div class="card-header">
+          <h3>Thông tin cá nhân</h3>
+          <button>Chỉnh sửa hồ sơ</button>
+        </div>
+        <div class="card-body">
+          <p><strong>Họ và tên:</strong> Phạm Sorange</p>
+          <p><strong>Giới tính:</strong> Unknown</p>
+          <p><strong>Ngày sinh:</strong> 12/03/1985</p>
+          <p><strong>SĐT / Email:</strong> +84363636</p>
+          <p><strong>Địa chỉ:</strong> (tuỳ chọn)</p>
+        </div>
+      </section>
+
+      <!-- Section 2: Thông tin y tế nền tảng -->
+      <section class="card">
+        <div class="card-header">
+          <h3>Thông tin y tế nền tảng</h3>
+        </div>
+        <div class="card-body grid-3">
+          <div><strong>Nhóm máu:</strong> A+</div>
+          <div><strong>Chiều cao:</strong> 165 cm</div>
+          <div><strong>Cân nặng:</strong> 60 kg</div>
+          <div><strong>BMI:</strong> 22.0</div>
+          <div class="chart">
+            <strong>Biểu đồ BMI</strong>
+            <img src="chart-placeholder.png" alt="BMI Chart" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Tiền sử bệnh -->
+      <section class="card">
+        <div class="card-header">
+          <h3>Tiền sử bệnh</h3>
+          <button>+ Thêm hồ sơ</button>
+        </div>
+        <div class="card-body">
+          <p>Chưa có thông tin.</p>
+        </div>
+      </section>
+
+      <!-- Section 4: Thuốc đang dùng -->
+      <section class="card">
+        <div class="card-header">
+          <h3>Thuốc đang sử dụng định kỳ</h3>
+          <button>+ Thêm thuốc</button>
+        </div>
+        <div class="card-body">
+          <p>Chưa có thông tin.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
