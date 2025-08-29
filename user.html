@@ -5,89 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hồ sơ cá nhân - Mediverse</title>
   <link rel="stylesheet" href="user.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="logo">MEDIVERSE</div>
-      <div class="avatar">
-        <img src="default-avatar.png" alt="Avatar">
-        <p class="username">Phạm Sorange</p>
+
+<div class="profile-container">
+  <aside class="sidebar">
+    <div class="logo">MEDIVERSE</div>
+    <div class="avatar"></div>
+    <ul class="nav">
+      <li onclick="showTab('personal-info')" class="active">Thông tin cá nhân</li>
+      <li onclick="showTab('health-info')">Thông tin y tế</li>
+      <li onclick="showTab('history')">Lịch sử khám</li>
+      <li onclick="showTab('settings')">Thiết lập</li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <!-- Thông tin cá nhân -->
+    <section id="personal-info" class="tab">
+      <h2>Phạm Sorange</h2>
+      <div class="card">
+        <div class="card-header">
+          <span>Thông tin cá nhân</span>
+          <button class="edit-btn">Chỉnh sửa hồ sơ</button>
+        </div>
+        <p><strong>Họ và tên:</strong> Phạm Sorange</p>
+        <p><strong>Giới tính:</strong> Nữ</p>
+        <p><strong>Ngày sinh:</strong> 12/03/1985</p>
+        <p><strong>Liên hệ:</strong> +8499999999</p>
+        <p><strong>Địa chỉ:</strong> (Tuỳ chọn)</p>
       </div>
-      <nav>
-        <a href="#" class="active"><i class="fas fa-user"></i> Thông tin cá nhân</a>
-        <a href="#"><i class="fas fa-heartbeat"></i> Thông tin y tế</a>
-        <a href="#"><i class="fas fa-calendar-alt"></i> Lịch sử khám</a>
-        <a href="#"><i class="fas fa-cog"></i> Thiết lập</a>
-      </nav>
-    </aside>
+    </section>
 
-    <!-- Main content -->
-    <main class="profile-content">
-      <div class="header-row">
-        <h2>Phạm Sorange</h2>
-        <div class="actions">
-          <button><i class="fas fa-share-alt"></i> Chia sẻ hồ sơ</button>
-          <button><i class="fas fa-folder-open"></i> Quản lý hồ sơ</button>
+    <!-- Thông tin y tế -->
+    <section id="health-info" class="tab" style="display: none;">
+      <h2>Thông tin y tế</h2>
+      <div class="card">
+        <div class="card-header">
+          <span>Thông tin y tế nền tảng</span>
         </div>
+        <p><strong>Nhóm máu:</strong> A+</p>
+        <p><strong>Chiều cao:</strong> 165 cm</p>
+        <p><strong>Cân nặng:</strong> 60 kg</p>
+        <p><strong>BMI:</strong> 22.0</p>
+        <hr>
+        <p><strong>Tiền sử bệnh:</strong> (Thêm nếu có)</p>
+        <p><strong>Tiền sử phẫu thuật:</strong> (Thêm nếu có)</p>
+        <p><strong>Thuốc sử dụng định kỳ:</strong> (Thêm nếu có)</p>
+        <button class="add-btn">+ Thêm hồ sơ</button>
       </div>
+    </section>
 
-      <!-- Section 1: Thông tin cá nhân -->
-      <section class="card">
-        <div class="card-header">
-          <h3>Thông tin cá nhân</h3>
-          <button>Chỉnh sửa hồ sơ</button>
-        </div>
-        <div class="card-body">
-          <p><strong>Họ và tên:</strong> Phạm Sorange</p>
-          <p><strong>Giới tính:</strong> Unknown</p>
-          <p><strong>Ngày sinh:</strong> 12/03/1985</p>
-          <p><strong>SĐT / Email:</strong> +84363636</p>
-          <p><strong>Địa chỉ:</strong> (tuỳ chọn)</p>
-        </div>
-      </section>
+    <!-- Lịch sử khám -->
+    <section id="history" class="tab" style="display: none;">
+      <h2>Lịch sử khám</h2>
+      <div class="search-bar">
+        <input type="text" placeholder="Tìm kiếm...">
+        <button>Bộ lọc</button>
+        <button class="add-btn">Thêm hồ sơ khám</button>
+      </div>
+      <ul class="history-list">
+        <li>
+          <span class="date">15/07/2025</span> – <strong>Bệnh viện A</strong>
+          <p>BS. Nguyễn Văn A – Nội tổng quát</p>
+          <p>Viêm họng cấp – kê kháng sinh 5 ngày</p>
+          <a class="detail-btn" href="#">Xem chi tiết</a>
+        </li>
+        <li>
+          <span class="date">20/03/2025</span> – <strong>Phòng khám B</strong>
+          <p>BS. Lê Thị B – Da liễu</p>
+          <p>Không phát hiện bất thường</p>
+          <a class="detail-btn" href="#">Xem chi tiết</a>
+        </li>
+        <li>
+          <span class="date">05/01/2025</span> – <strong>Bệnh viện C</strong>
+          <p>BS. Trần Văn C – Tim mạch</p>
+          <p>Huyết áp ổn định</p>
+          <a class="detail-btn" href="#">Xem chi tiết</a>
+        </li>
+      </ul>
+    </section>
 
-      <!-- Section 2: Thông tin y tế nền tảng -->
-      <section class="card">
-        <div class="card-header">
-          <h3>Thông tin y tế nền tảng</h3>
-        </div>
-        <div class="card-body grid-3">
-          <div><strong>Nhóm máu:</strong> A+</div>
-          <div><strong>Chiều cao:</strong> 165 cm</div>
-          <div><strong>Cân nặng:</strong> 60 kg</div>
-          <div><strong>BMI:</strong> 22.0</div>
-          <div class="chart">
-            <strong>Biểu đồ BMI</strong>
-            <img src="chart-placeholder.png" alt="BMI Chart" />
-          </div>
-        </div>
-      </section>
+    <!-- Thiết lập -->
+    <section id="settings" class="tab" style="display: none;">
+      <h2>Thiết lập</h2>
+      <p>(Chức năng đang cập nhật...)</p>
+    </section>
+  </main>
+</div>
 
-      <!-- Section 3: Tiền sử bệnh -->
-      <section class="card">
-        <div class="card-header">
-          <h3>Tiền sử bệnh</h3>
-          <button>+ Thêm hồ sơ</button>
-        </div>
-        <div class="card-body">
-          <p>Chưa có thông tin.</p>
-        </div>
-      </section>
+<script>
+  function showTab(tabId) {
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => tab.style.display = 'none');
 
-      <!-- Section 4: Thuốc đang dùng -->
-      <section class="card">
-        <div class="card-header">
-          <h3>Thuốc đang sử dụng định kỳ</h3>
-          <button>+ Thêm thuốc</button>
-        </div>
-        <div class="card-body">
-          <p>Chưa có thông tin.</p>
-        </div>
-      </section>
-    </main>
-  </div>
+    document.getElementById(tabId).style.display = 'block';
+
+    const navItems = document.querySelectorAll('.nav li');
+    navItems.forEach(item => item.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+</script>
+
 </body>
 </html>
