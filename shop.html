@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mediverse Shop</title>
+  <link rel="stylesheet" href="shop.css" />
+</head>
+<body>
+
+<header>
+  <a class="logo" href="success.html">MEDIVERSE</a>
+  <div class="icons">
+    <i onclick="showCart()">🛒</i>
+    <i onclick="window.location.href='user.html'">👤</i>
+  </div>
+</header>
+
+<div class="layout">
+  <div class="sidebar">
+    <h3>Phân loại</h3>
+    <ul>
+      <li onclick="filterCategory('all')">Tất cả</li>
+      <li onclick="filterCategory('ke-don')">Thuốc kê đơn</li>
+      <li onclick="filterCategory('thuc-pham')">Thực phẩm chức năng</li>
+      <li onclick="filterCategory('vitamin')">Vitamin & khoáng chất</li>
+    </ul>
+  </div>
+  <div class="main">
+    <div class="products" id="product-list">
+      <!-- sản phẩm -->
+    </div>
+  </div>
+</div>
+
+<footer>
+  Mediverse © 2025 - Chính sách mua thuốc online
+</footer>
+
+<!-- Modal -->
+<div class="modal" id="product-modal">
+  <div class="modal-content">
+    <div class="close" onclick="closeModal()">✖</div>
+    <h3 id="modal-title"></h3>
+    <p id="modal-detail"></p>
+    <button class="add" onclick="addToCart()">Thêm vào giỏ</button>
+    <button class="buy" onclick="buyNow()">Mua ngay</button>
+  </div>
+</div>
+
+<script>
+  const products = [
+    {
+      id: 1,
+      name: "Pharmaton Energy",
+      img: "https://via.placeholder.com/120x140.png?text=Pharmaton",
+      sold: "800 đã bán",
+      detail: "Sản phẩm giúp tăng cường năng lượng.",
+      type: "vitamin"
+    },
+    {
+      id: 2,
+      name: "Panadol Extra",
+      img: "https://via.placeholder.com/120x140.png?text=Panadol",
+      sold: "800 đã bán",
+      detail: "Thuốc giảm đau, hạ sốt nhanh.",
+      type: "ke-don"
+    },
+    {
+      id: 3,
+      name: "Medsulin",
+      img: "https://via.placeholder.com/120x140.png?text=Medsulin",
+      sold: "800 đã bán",
+      detail: "Hỗ trợ điều trị tiểu đường.",
+      type: "ke-don"
+    }
+  ];
+
+  let currentProduct = null;
+
+  function renderProducts(list) {
+    const container = document.getElementById('product-list');
+    container.innerHTML = "";
+    list.forEach(p => {
+      container.innerHTML += `
+        <div class="product">
+          <img src="${p.img}" />
+          <h4>${p.name}</h4>
+          <p>${p.sold}</p>
+          <div class="stars">⭐️⭐️⭐️⭐️⭐️</div>
+          <button class="add" onclick="openModal(${p.id})">Thêm vào giỏ</button>
+          <button class="buy" onclick="openModal(${p.id})">Mua ngay</button>
+        </div>
+      `;
+    });
+  }
+
+  function filterCategory(type) {
+    if (type === 'all') return renderProducts(products);
+    const filtered = products.filter(p => p.type === type);
+    renderProducts(filtered);
+  }
+
+  function openModal(id) {
+    const product = products.find(p => p.id === id);
+    currentProduct = product;
+    document.getElementById("modal-title").textContent = product.name;
+    document.getElementById("modal-detail").textContent = product.detail;
+    document.getElementById("product-modal").style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("product-modal").style.display = "none";
+  }
+
+  function addToCart() {
+    let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    cart.push(currentProduct);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Đã thêm vào giỏ");
+    closeModal();
+  }
+
+  function buyNow() {
+    alert("Chức năng mua ngay đang được phát triển!");
+    closeModal();
+  }
+
+  function showCart() {
+    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    alert(`Bạn có ${cart.length} sản phẩm trong giỏ`);
+  }
+
+  renderProducts(products);
+</script>
+
+</body>
+</html>
