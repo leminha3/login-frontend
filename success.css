@@ -111,6 +111,7 @@ nav a:hover::after {
 
 .feature-box {
   width: 250px;
+  height: 160px;
   text-align: center;
   padding: 20px;
   box-shadow: 1px 1px 10px #cccccc;
@@ -132,6 +133,12 @@ nav a:hover::after {
   font-size: 14px;
   color: #555;
 }
+
+.features a {
+  text-decoration: none;
+  color: #1a73e8;
+}
+
 .news {
   padding: 40px;
 }

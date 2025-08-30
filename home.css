@@ -133,6 +133,7 @@ header.main-header {
 
 .feature-box {
   width: 250px;
+  height: 16s0px;
   text-align: center;
   padding: 20px;
   box-shadow: 1px 1px 10px #cccccc;
@@ -153,6 +154,11 @@ header.main-header {
 .feature-box p {
   font-size: 14px;
   color: #555;
+}
+
+.features a {
+  text-decoration: none;
+  color: #1a73e8;
 }
 
 .news {
