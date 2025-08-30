@@ -1,3 +1,8 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -11,6 +16,10 @@ body {
 
 /* Sidebar */
 .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 240px;
   background: white;
   padding: 20px;
@@ -18,18 +27,17 @@ body {
 }
 
 .logo {
-  font-size: 18px;
-  color: #2b5bd7;
-  text-decoration: none;
   font-weight: bold;
+  color: #1a73e8;
+  font-size: 24px;
+  text-decoration: none;
 }
 
 .avatar {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  margin: 20px 0 10px;
-  ;}
+}
 
 .avatar-container {
   text-align: center; /* Căn giữa avatar trong container */
@@ -44,7 +52,6 @@ body {
   display: block;
   margin: 0 auto; /* Đưa ảnh vào giữa */
 }
-
 
 .sidebar nav ul {
   list-style: none;
@@ -63,14 +70,18 @@ body {
   border-radius: 8px;
 }
 
-.sidebar nav ul li a.active,
-.sidebar nav ul li a:hover {
+.sidebar nav ul li a.active{
   background-color: #eaf0ff;
   color: #2b5bd7;
 }
 
+.sidebar nav ul li a:hover {
+  background: #f0f0f0;
+}
+
 /* Main Content */
 .content {
+  margin-left: 300px;
   flex: 1;
   padding: 30px;
 }
@@ -79,6 +90,7 @@ body {
   background: white;
   border-radius: 10px;
   padding: 25px;
+  margin: 30px 0;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
@@ -116,12 +128,7 @@ button {
 }
 
 /* Hide inactive content */
-.tab-content {
-  display: none;
-}
-.tab-content.active {
-  display: block;
-}
+
 .username {
   font-weight: 700;
   margin-top: 10px;
