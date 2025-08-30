@@ -167,6 +167,7 @@ header.main-header {
 
 .news-list {
   display: flex;
+  justify-content: space-around;
   gap: 20px;
   flex-wrap: wrap;
 }

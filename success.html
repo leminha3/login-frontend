@@ -5,134 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mediverse - Trang chủ</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    body {
-      background: #f7f9fc;
-    }
-    header {
-      background: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    .logo {
-      font-weight: bold;
-      color: #2563eb;
-      font-size: 20px;
-    }
-    nav a {
-      margin: 0 15px;
-      color: #333;
-      text-decoration: none;
-    }
-    .user-icon a {
-      background: #2563eb;
-      padding: 8px 10px;
-      border-radius: 10px;
-      color: white;
-    }
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 50px;
-      background: white;
-    }
-    .hero .left h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-    .hero .left p {
-      margin-bottom: 20px;
-      color: #555;
-    }
-    .hero .buttons button {
-      background: #2563eb;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      margin-right: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .features {
-      display: flex;
-      justify-content: space-around;
-      padding: 40px 20px;
-      background: #f9fafb;
-    }
-    .feature-box {
-      text-align: center;
-      max-width: 200px;
-    }
-    .feature-box img {
-      width: 50px;
-      margin-bottom: 10px;
-    }
-    .feature-box h3 {
-      margin-bottom: 10px;
-    }
-    .news {
-      padding: 40px 50px;
-    }
-    .news h2 {
-      margin-bottom: 20px;
-    }
-    .news-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-    .news-item {
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      text-decoration: none;
-      color: black;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    .news-item img {
-      width: 100%;
-      height: 120px;
-      object-fit: cover;
-    }
-    .news-item h4 {
-      font-size: 14px;
-      margin: 10px;
-    }
-    .news-item p {
-      font-size: 12px;
-      margin: 0 10px 10px 10px;
-      color: gray;
-    }
-    footer {
-      background: #2563eb;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      padding: 30px 50px;
-      margin-top: 40px;
-    }
-    footer h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-    footer p {
-      font-size: 13px;
-    }
-  </style>
+  <link rel="stylesheet" href="success.css"/>
 </head>
 <body>
   <header>
-    <div class="logo">MEDIVERSE</div>
+    <div class="logo"><a href="#home">MEDIVERSE</a></div>
     <nav>
       <a href="1.html">Trang chủ</a>
       <a href="2.html">Cộng đồng</a>
@@ -146,65 +23,65 @@
   </header>
 
   <section class="hero">
-    <div class="left">
+    <div class="hero-left">
       <h1>Sức khoẻ trong tầm tay bạn</h1>
       <p>Giải pháp y tế toàn diện, kết nối bác sĩ, bệnh nhân và cộng đồng</p>
       <div class="buttons">
-        <a href="6.html"><button>Khám ngay</button></a>
-        <a href="7.html"><button>Trò chuyện với AI</button></a>
+        <a href="#khamngay"><button>Khám ngay</button></a>
+        <a href="#aichat"><button>Trò chuyện với AI</button></a>
       </div>
     </div>
-    <div class="right">
-      <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" width="220">
+    <div class="hero-right">
+      <img src="doctor.png" alt="Minh họa bác sĩ và bệnh nhân">
     </div>
   </section>
 
   <section class="features">
     <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
-      <a href="2.html"><h3>Cộng đồng</h3></a>
-      <p>Chia sẻ & học hỏi từ cộng đồng sức khoẻ</p>
+      <i class="fas fa-users"></i>
+      <h3>Cộng đồng</h3>
+      <p>Chia sẻ & học hỏi từ cộng đồng chăm sóc sức khoẻ</p>
     </div>
     <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/1048/1048949.png">
-      <a href="8.html"><h3>Mua thuốc</h3></a>
+      <i class="fas fa-pills"></i>
+      <h3>Mua thuốc</h3>
       <p>Đặt thuốc trực tuyến nhanh chóng, tiện lợi</p>
     </div>
     <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/2991/2991143.png">
-      <a href="3.html"><h3>Hồ sơ y tế</h3></a>
+      <i class="fas fa-file-medical"></i>
+      <h3>Hồ sơ y tế</h3>
       <p>Quản lý bệnh án an toàn, bảo mật</p>
     </div>
     <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png">
-      <a href="4.html"><h3>Tư vấn</h3></a>
-      <p>Hỗ trợ sức khoẻ trực tuyến 24/7</p>
+      <i class="fas fa-comments"></i>
+      <h3>Tư vấn</h3>
+      <p>Hỗ trợ sức khoẻ từ bác sĩ 24/7</p>
     </div>
   </section>
 
   <section class="news">
     <h2>Tin tức & Bài viết mới nhất</h2>
-    <div class="news-grid">
-      <a class="news-item" href="https://giaan115.com/5-dau-hieu-benh-tieu-duong">
-        <img src="https://cdn-icons-png.flaticon.com/512/861/861060.png" alt="">
-        <h4>5 dấu hiệu cảnh báo bệnh tiểu đường bạn không nên bỏ qua</h4>
-        <p>10/08/2025</p>
-      </a>
-      <a class="news-item" href="https://vbee.vn/blog/ai/ung-dung-ai-trong-y-te/?utm_source=BL&utm_medium=CPC&utm_term=Vietnam&utm_campaign=SM_GG_DU_NBR_AS_A_VN_B_UNK_UNK&gad_source=1&gad_campaignid=21793655902&gclid=Cj0KCQjw_L_FBhDmARIsAItqgt6I0l5CuzfJchz50ALGuwCKmmReJl1UpCjGMjgPlIwtR0TZiChqQksaAmhZEALw_wcB">
-        <img src="https://cdn-icons-png.flaticon.com/512/1356/1356594.png" alt="">
-        <h4>Công nghệ AI đang thay đổi ngành y thế nào?</h4>
-        <p>07/08/2025</p>
-      </a>
-      <a class="news-item" href="https://www.zespri.com/vi-VN/blogdetail/tang-cuong-de-khang-va-suc-khoe-tinh-than-bang-vitamin-c-tu-hoa-qua?utm_source=Google&utm_medium=Paid-Search&utm_campaign=Summer_VN_Traffic&utm_content=SEM&utm_term=Not-Applicable_F_NA_Interest_SEM_Search_Text_Custom_1X1_SEM&gad_source=1">
-        <img src="https://cdn-icons-png.flaticon.com/512/2917/2917994.png" alt="">
-        <h4>Chế độ ăn uống giúp tăng sức đề kháng mùa dịch</h4>
-        <p>03/08/2025</p>
-      </a>
-      <a class="news-item" href="https://bidv.com.vn/bidv/tin-tuc/tin-ve-bidv/ra-mat-tinh-nang-chatbot-ho-tro-khach-hang-doanh-nghiep-tren-bidv-ibank">
-        <img src="https://cdn-icons-png.flaticon.com/512/5249/5249115.png" alt="">
-        <h4>Mediverse ra mắt tính năng Chatbot AI hỗ trợ tư vấn 24/7</h4>
-        <p>01/08/2025</p>
-      </a>
+    <div class="news-list">
+      <div class="news-card">
+        <div class="image-placeholder"></div>
+        <p>5 dấu hiệu cảnh báo bệnh tiểu đường bạn không nên bỏ qua</p>
+        <span>01/08/2025</span>
+      </div>
+      <div class="news-card">
+        <div class="image-placeholder"></div>
+        <p>Công nghệ AI đang thay đổi ngành y như thế nào?</p>
+        <span>07/08/2025</span>
+      </div>
+      <div class="news-card">
+        <div class="image-placeholder"></div>
+        <p>Chế độ ăn uống giúp tăng sức đề kháng mùa dịch</p>
+        <span>08/08/2025</span>
+      </div>
+      <div class="news-card">
+        <div class="image-placeholder"></div>
+        <p>Mediverse ra mắt tính năng Chatbot AI hỗ trợ tư vấn 24/7</p>
+        <span>09/08/2025</span>
+      </div>
     </div>
   </section>
 
