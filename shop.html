@@ -6,25 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mediverse Shop</title>
   <link rel="stylesheet" href="shop.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
 
 <header>
-  <a class="logo" href="success.html">MEDIVERSE</a>
+  <div class="logo"><a href="success.html">MEDIVERSE</a></div>
+  <nav>
+      <a href="success.html">Trang chủ</a>
+      <a href="#congdong">Cộng đồng</a>
+      <a href="user.html">Hồ sơ y tế</a>
+      <a href="#tuvan">Tư vấn</a>
+      <a href="shop.html">Mua thuốc</a>
+  </nav>
   <div class="icons">
-    <i onclick="showCart()">🛒</i>
-    <i onclick="window.location.href='user.html'">👤</i>
+    <i class="fa-solid fa-cart-shopping" onclick="showCart()"></i>
+    <a href="user.html"><i class="fas fa-user"></i></a>
   </div>
 </header>
 
 <div class="layout">
   <div class="sidebar">
-    <h3>Phân loại</h3>
+    <h2>Phân loại</h2>
     <ul>
-      <li onclick="filterCategory('all')">Tất cả</li>
-      <li onclick="filterCategory('ke-don')">Thuốc kê đơn</li>
-      <li onclick="filterCategory('thuc-pham')">Thực phẩm chức năng</li>
-      <li onclick="filterCategory('vitamin')">Vitamin & khoáng chất</li>
+      <li><a href="#all" onclick="filterCategory('all')" class="link active">Tất cả</a></li>
+      <li><a href="#kedon" onclick="filterCategory('ke-don')">Thuốc kê đơn</a></li>
+      <li><a href="#thucpham" onclick="filterCategory('thuc-pham')">Thực phẩm chức năng</a></li>
+      <li><a href="#vitamin" onclick="filterCategory('vitamin')">Vitamin & khoáng chất</a></li>
     </ul>
   </div>
   <div class="main">
@@ -54,7 +62,7 @@
     {
       id: 1,
       name: "Pharmaton Energy",
-      img: "https://via.placeholder.com/120x140.png?text=Pharmaton",
+      img: "pmt_eng.png",
       sold: "800 đã bán",
       detail: "Sản phẩm giúp tăng cường năng lượng.",
       type: "vitamin"
@@ -62,7 +70,7 @@
     {
       id: 2,
       name: "Panadol Extra",
-      img: "https://via.placeholder.com/120x140.png?text=Panadol",
+      img: "panadol.jpg",
       sold: "800 đã bán",
       detail: "Thuốc giảm đau, hạ sốt nhanh.",
       type: "ke-don"
@@ -70,7 +78,7 @@
     {
       id: 3,
       name: "Medsulin",
-      img: "https://via.placeholder.com/120x140.png?text=Medsulin",
+      img: "med.jpg",
       sold: "800 đã bán",
       detail: "Hỗ trợ điều trị tiểu đường.",
       type: "ke-don"
@@ -133,6 +141,18 @@
   }
 
   renderProducts(products);
+
+  const items = document.querySelectorAll(".sidebar a");
+
+    items.forEach(item => {
+      item.addEventListener("click", () => {
+        // Xóa class active ở tất cả các mục
+        items.forEach(i => i.classList.remove("active"));
+        // Thêm class active vào mục vừa click
+        item.classList.add("active");
+      });
+    });
+
 </script>
 
 </body>
