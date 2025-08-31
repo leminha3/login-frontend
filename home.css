@@ -227,6 +227,11 @@ header.main-header {
   font-size: 12px;
   color: #888;
 }
+.news-link {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Để thẻ <a> bao trùm cả news-card */
+}
 
 /* (Không còn dùng image-placeholder nếu có ảnh thật) */
 .image-placeholder {
@@ -281,3 +286,4 @@ footer div {
     flex: 0 0 100%;
   }
 }
+
