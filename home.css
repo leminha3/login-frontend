@@ -1,5 +1,3 @@
-
-
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +10,7 @@ body {
   color: #333;
 }
 
+/* ==== HEADER ==== */
 header.main-header {
   display: flex;
   justify-content: space-between;
@@ -39,9 +38,10 @@ header.main-header {
 
 .nav-links a {
   text-decoration: none;
-  padding: 20px ;
+  padding: 20px;
   color: #333;
   font-weight: 500;
+  position: relative;
 }
 
 .nav-links a::after {
@@ -51,6 +51,9 @@ header.main-header {
   background: #1a73e8;
   transition: width 0.3s;
   width: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
 }
 
 .nav-links a:hover::after {
@@ -80,6 +83,7 @@ header.main-header {
   border-radius: 50%;
 }
 
+/* ==== HERO ==== */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -124,6 +128,7 @@ header.main-header {
   height: auto;
 }
 
+/* ==== FEATURES ==== */
 .features {
   display: flex;
   justify-content: space-around;
@@ -134,7 +139,7 @@ header.main-header {
 
 .feature-box {
   width: 250px;
-  height: 16s0px;
+  height: 160px; /* ← Sửa lỗi gõ nhầm 16s0px */
   text-align: center;
   padding: 20px;
   box-shadow: 1px 1px 10px #cccccc;
@@ -162,6 +167,7 @@ header.main-header {
   color: #1a73e8;
 }
 
+/* ==== NEWS ==== */
 .news {
   padding: 40px;
 }
@@ -174,14 +180,16 @@ header.main-header {
 
 .news-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* 👈 Giữ tất cả trong 1 hàng */
+  overflow-x: auto;   /* 👈 Cuộn ngang khi thu nhỏ */
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
 }
 
-
 .news-card {
-  width: 100%;
+  flex: 0 0 23%;       /* 4 card / hàng */
   max-width: 300px;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -192,21 +200,21 @@ header.main-header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  scroll-snap-align: start;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
 }
 
 .news-image {
   width: 100%;
-  height: 160px;        
-  object-fit: cover;    
+  height: 160px;
+  object-fit: cover;
   border-radius: 8px;
-  display: block;
-}
-
-
-.image-placeholder {
-  height: 100px;
-  background-color: #d1d1d1;
-  border-radius: 4px;
   margin-bottom: 10px;
 }
 
@@ -220,6 +228,12 @@ header.main-header {
   color: #888;
 }
 
+/* (Không còn dùng image-placeholder nếu có ảnh thật) */
+.image-placeholder {
+  display: none;
+}
+
+/* ==== FOOTER ==== */
 footer {
   background-color: #1a73e8;
   color: white;
@@ -239,6 +253,8 @@ footer div {
   text-decoration: none;
   font-size: 18px;
 }
+
+/* ==== LOGIN BUTTON ==== */
 .login-btn {
   background-color: #1a73e8;
   color: white;
@@ -251,4 +267,17 @@ footer div {
 
 .login-btn:hover {
   background-color: #0f5ed9;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 1024px) {
+  .news-card {
+    flex: 0 0 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .news-card {
+    flex: 0 0 100%;
+  }
 }
