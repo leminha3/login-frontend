@@ -1,5 +1,3 @@
-
-
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +10,7 @@ body {
   color: #333;
 }
 
+/* ==== HEADER ==== */
 header.main-header {
   display: flex;
   align-items: center;
@@ -52,6 +51,9 @@ header.main-header {
   background: #1a73e8;
   transition: width 0.3s;
   width: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
 }
 
 .nav-links a:hover::after {
@@ -82,6 +84,7 @@ header.main-header {
   border-radius: 50%;
 }
 
+/* ==== HERO ==== */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -126,6 +129,7 @@ header.main-header {
   height: auto;
 }
 
+/* ==== FEATURES ==== */
 .features {
   display: flex;
   justify-content: space-around;
@@ -165,6 +169,7 @@ header.main-header {
   color: #1a73e8;
 }
 
+/* ==== NEWS ==== */
 .news {
   padding: 40px;
 }
@@ -177,23 +182,41 @@ header.main-header {
 
 .news-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* 👈 Giữ tất cả trong 1 hàng */
+  overflow-x: auto;   /* 👈 Cuộn ngang khi thu nhỏ */
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
 }
 
 .news-card {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 16px;
-  width: 220px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 0 0 23%;       /* 4 card / hàng */
+  max-width: 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  scroll-snap-align: start;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
 }
 
-.image-placeholder {
-  height: 100px;
-  background-color: #d1d1d1;
-  border-radius: 4px;
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+.news-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
   margin-bottom: 10px;
 }
 
@@ -206,7 +229,18 @@ header.main-header {
   font-size: 12px;
   color: #888;
 }
+.news-link {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Để thẻ <a> bao trùm cả news-card */
+}
 
+/* (Không còn dùng image-placeholder nếu có ảnh thật) */
+.image-placeholder {
+  display: none;
+}
+
+/* ==== FOOTER ==== */
 footer {
   background-color: #1a73e8;
   color: white;
@@ -226,6 +260,8 @@ footer div {
   text-decoration: none;
   font-size: 18px;
 }
+
+/* ==== LOGIN BUTTON ==== */
 .login-btn {
   background-color: #1a73e8;
   color: white;
