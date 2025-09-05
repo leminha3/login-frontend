@@ -32,7 +32,7 @@ body {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  margin-left: 20px;
+  margin: 0 0.4vw ;
 }
 .nav-links a:hover {
   color: #2575fc;

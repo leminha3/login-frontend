@@ -56,7 +56,7 @@
       color: #1a73e8;
     }
 nav a {
-  margin: 0 15px;
+  margin: 0 0.4vw ;
   padding: 20px;
   color: #333;
   text-decoration: none;
@@ -64,6 +64,10 @@ nav a {
     
 nav {
   display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 nav a::after {
@@ -250,19 +254,78 @@ nav a:hover::after {
       margin-bottom: 10px;
     }
 
-    @media (max-width: 768px) {
-      .layout {
+    #menu-toggle {
+      display: none;
+    }
+
+    .open, .close-menu {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 830px) {
+      body {
+        overflow-x: hidden;
+      }
+
+      nav {
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: absolute;
+        top: 0;
+        right: -100%;
         flex-direction: column;
+        width: 300px;
+        height: 100vh;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .open, .close-menu {
+        display: block;
+      }
+
+      .open {
+        position: absolute;
+        right: 20px;
+      }
+
+      .close-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      .icons {
+        margin-right: 40px;
+      }
+
+      #menu-toggle:checked + .open {
+        display: none;
+      }
+
+      #menu-toggle:checked ~ nav {
+        right: 0;
+        background: white;
+        height: 100vh;
+        top: 0;
+        padding-top: 60px;
+        z-index: 9;
+      }
+
+      #menu-toggle:checked ~ .overlay {
+        display: block;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #616161;
+        opacity: 0.2;
+        z-index: 8;
       }
 
       .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        border-right: none;
+        width: 35vh;
       }
-
-      .main {
-        max-height: none;
-      }
+      
     }
