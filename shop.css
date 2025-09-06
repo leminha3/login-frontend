@@ -2,6 +2,10 @@
       margin: 0; padding: 0; box-sizing: border-box;
     }
 
+    html {
+      font-size: 16px;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #f9f9fc;
@@ -48,7 +52,7 @@
       .logo {
       font-weight: bold;
       color: #1a73e8;
-      font-size: 24px;
+      font-size: 1.5rem;
     }
 
     .logo a {
@@ -90,6 +94,7 @@ nav a:hover::after {
 
     .sidebar {
       width: 240px;
+      max-width: 33vw;
       padding: 20px;
       background-color: white;
       border-right: 1px solid #eee;
@@ -100,14 +105,14 @@ nav a:hover::after {
 
     .sidebar h2 {
       margin-bottom: 10px;
-      font-size: 20px;
+      font-size: 1.25rem;
       color: #333;
     }
 
     .sidebar ul {
       list-style: none;
       padding-left: 10px;
-      font-size: 16px;
+      font-size: 1rem;
     }
 
     .sidebar ul a {
@@ -135,7 +140,8 @@ nav a:hover::after {
       flex: 1;
       padding: 20px;
       overflow-y: auto;
-      max-height: calc(100vh - 65px);
+      max-width: 66vw;
+      max-height: calc(100vh - 35);
     }
 
     .products {
@@ -163,18 +169,18 @@ nav a:hover::after {
     }
 
     .product h4 {
-      font-size: 16px;
+      font-size: 1rem;
       margin: 10px 0 5px;
     }
 
     .product p {
-      font-size: 13px;
+      font-size: 0.8125rem;
       color: gray;
       margin-bottom: 5px;
     }
 
     .product .stars {
-      font-size: 12px;
+      font-size: 0.75rem;
       color: orange;
       margin-bottom: 10px;
     }
@@ -216,7 +222,7 @@ nav a:hover::after {
     footer {
       background: white;
       padding: 10px 30px;
-      font-size: 13px;
+      font-size: 0.8125rem;
       text-align: center;
       border-top: 1px solid #eee;
     }
@@ -249,7 +255,7 @@ nav a:hover::after {
 
     .close {
       text-align: right;
-      font-size: 18px;
+      font-size: 1.125rem;
       cursor: pointer;
       margin-bottom: 10px;
     }
@@ -260,11 +266,15 @@ nav a:hover::after {
 
     .open, .close-menu {
       display: none;
-      font-size: 24px;
+      font-size: 1.5rem;
       cursor: pointer;
     }
 
     @media screen and (max-width: 830px) {
+      html {
+      font-size: 14px;
+      }
+      
       body {
         overflow-x: hidden;
       }
@@ -274,11 +284,11 @@ nav a:hover::after {
         justify-content: flex-start;
         position: absolute;
         top: 0;
-        right: -100%;
+        right: -250px;
         flex-direction: column;
-        width: 300px;
+        width: 250px;
         height: 100vh;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
 
       .open, .close-menu {
@@ -324,8 +334,4 @@ nav a:hover::after {
         z-index: 8;
       }
 
-      .sidebar {
-        width: 35vh;
-      }
-      
     }

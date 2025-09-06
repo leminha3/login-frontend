@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f5f7fb;
@@ -20,7 +24,7 @@ header.main-header {
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #1a73e8;
 }
@@ -63,7 +67,7 @@ header.main-header {
 .user-area {
   display: flex;
   align-items: center;
-  font-size: 1.4vw;
+  font-size: 1.7vw;
   gap: 10px;
 }
 
@@ -98,21 +102,21 @@ header.main-header {
 }
 
 .hero-left h1 {
-  font-size: 36px;
+  font-size: 2.25rem;
   margin-bottom: 20px;
   color: #1a73e8;
 }
 
 .hero-left p {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 30px;
   color: #555;
 }
 
 .buttons button {
   padding: 12px 24px;
-  font-size: 16px;
-  margin-right: 10px;
+  font-size: 1rem;
+  margin: 10px 10px 10px 0;
   border: none;
   border-radius: 6px;
   background-color: #1a73e8;
@@ -149,18 +153,18 @@ header.main-header {
 }
 
 .feature-box i {
-  font-size: 32px;
+  font-size: 2rem;
   color: #1a73e8;
   margin-bottom: 10px;
 }
 
 .feature-box h3 {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 10px;
 }
 
 .feature-box p {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #555;
 }
 
@@ -175,7 +179,7 @@ header.main-header {
 }
 
 .news h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 20px;
   color: #1a73e8;
 }
@@ -221,12 +225,13 @@ header.main-header {
 }
 
 .news-card p {
-  font-size: 14px;
+  color: #000;
+  font-size: 0.875rem;
   margin-bottom: 5px;
 }
 
 .news-card span {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #888;
 }
 .news-link {
@@ -258,7 +263,7 @@ footer div {
   color: white;
   margin-right: 10px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 /* ==== LOGIN BUTTON ==== */
@@ -282,11 +287,15 @@ footer div {
 
     .open, .close-menu {
       display: none;
-      font-size: 24px;
+      font-size: 1.5rem;
       cursor: pointer;
     }
 
     @media screen and (max-width: 830px) {
+      html {
+      font-size: 14px;
+      }
+
       body {
         overflow-x: hidden;
       }
@@ -296,11 +305,11 @@ footer div {
         justify-content: flex-start;
         position: absolute;
         top: 0;
-        right: -100%;
+        right: -250px;
         flex-direction: column;
-        width: 300px;
+        width: 250px;
         height: 100vh;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
 
       .open, .close-menu {

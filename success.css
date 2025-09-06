@@ -1,19 +1,23 @@
 * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
     }
     
+html {
+  font-size: 16px;
+}
+
     .user-icon i {
-      background: #1a73e8;
-      padding: 8px 10px;
-      border-radius: 10px;
-      color: white;
-      margin-left: auto;
+  background: #1a73e8;
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: white;
+  margin-left: auto;
     }
     body {
-      background: #f7f9fc;
+  background: #f7f9fc;
     }
 header {
   display: flex;
@@ -24,10 +28,10 @@ header {
 }
 
     .logo {
-      font-weight: bold;
-      color: #1a73e8;
-      font-size: 24px;
-      margin-right: auto;
+  font-weight: bold;
+  color: #1a73e8;
+  font-size: 1.5rem;
+  margin-right: auto;
     }
 
 .logo a {
@@ -40,18 +44,18 @@ nav {
 }
 
     nav a {
-      margin: 0 0.4vw ;
-      padding: 20px;
-      color: #333;
-      text-decoration: none;
+  margin: 0 0.4vw ;
+  padding: 20px;
+  color: #333;
+  text-decoration: none;
     }
     
     nav {
-      display: flex;
-      flex: 1;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
     }
 
 nav a::after {
@@ -90,21 +94,21 @@ nav a:hover::after {
 }
 
 .hero-left h1 {
-  font-size: 36px;
+  font-size: 2.25rem;
   margin-bottom: 20px;
   color: #1a73e8;
 }
 
 .hero-left p {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 30px;
   color: #555;
 }
 
 .buttons button {
   padding: 12px 24px;
-  font-size: 16px;
-  margin-right: 10px;
+  font-size: 1rem;
+  margin: 10px 10px 10px 0;
   border: none;
   border-radius: 6px;
   background-color: #1a73e8;
@@ -141,18 +145,18 @@ nav a:hover::after {
 }
 
 .feature-box i {
-  font-size: 32px;
+  font-size: 2rem;
   color: #1a73e8;
   margin-bottom: 10px;
 }
 
 .feature-box h3 {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 10px;
 }
 
 .feature-box p {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #555;
 }
 
@@ -167,7 +171,7 @@ nav a:hover::after {
 }
 
 .news h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 20px;
   color: #1a73e8;
 }
@@ -180,6 +184,10 @@ nav a:hover::after {
   overflow-x: auto; /* Cuộn ngang nếu không đủ chỗ */
   scroll-snap-type: x mandatory;
   padding-bottom: 10px;
+}
+
+.news-link{
+  text-decoration: none;
 }
 
 .news-card {
@@ -196,6 +204,7 @@ nav a:hover::after {
   justify-content: space-between;
   text-decoration: none;
   color: inherit;
+  text-overflow: ellipsis;
   scroll-snap-align: start;
   transition: transform 0.3s ease;
 }
@@ -213,12 +222,13 @@ nav a:hover::after {
 }
 
 .news-card p {
-  font-size: 14px;
+  color: #000;
+  font-size: 0.875rem;
   margin-bottom: 5px;
 }
 
 .news-card span {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #888;
 }
     footer {
@@ -230,11 +240,11 @@ nav a:hover::after {
       margin-top: 40px;
     }
     footer h3 {
-      font-size: 18px;
+      font-size: 1.125rem;
       margin-bottom: 10px;
     }
     footer p {
-      font-size: 13px;
+      font-size: 0.8125rem;
     }
 
     #menu-toggle {
@@ -243,11 +253,15 @@ nav a:hover::after {
 
     .open, .close-menu {
       display: none;
-      font-size: 24px;
+      font-size: 1.5rem;
       cursor: pointer;
     }
 
     @media screen and (max-width: 830px) {
+    html {
+      font-size: 14px;
+    }
+
       body {
         overflow-x: hidden;
       }
@@ -257,11 +271,11 @@ nav a:hover::after {
         justify-content: flex-start;
         position: absolute;
         top: 0;
-        right: -100%;
+        right: -250px;
         flex-direction: column;
-        width: 300px;
+        width: 250px;
         height: 100vh;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
 
       .open, .close-menu {

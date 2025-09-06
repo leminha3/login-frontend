@@ -1,6 +1,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
@@ -29,7 +30,7 @@ body {
 .logo {
   font-weight: bold;
   color: #1a73e8;
-  font-size: 24px;
+  font-size: 1.5rem;
   text-decoration: none;
 }
 
@@ -133,4 +134,18 @@ button {
   font-weight: 700;
   margin-top: 10px;
   text-align: center;
+}
+@media screen and (max-width: 830px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .sidebar {
+    max-width: 33vw;
+  }
+  
+  .content {
+    margin-left: 33vw;
+    max-width: 66vw;
+  }
 }
