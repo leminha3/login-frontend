@@ -5,6 +5,7 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: #f4f7fc;
@@ -24,7 +25,6 @@ body {
   width: 240px;
   background: white;
   padding: 20px;
-  border-right: 1px solid #ddd;
 }
 
 .logo {
@@ -102,7 +102,7 @@ body {
 /* History Section */
 .search {
   padding: 8px;
-  width: 300px;
+  width: 95%;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -137,15 +137,25 @@ button {
 }
 @media screen and (max-width: 830px) {
   html {
+    overflow-x: hidden;
     font-size: 14px;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
   }
   
   .sidebar {
-    max-width: 33vw;
+    max-width: 25vw;
   }
   
   .content {
-    margin-left: 33vw;
-    max-width: 66vw;
+    margin-left: 25vw;
+    max-width: 75vw;
+  }
+
+  .card {
+    width: 85%;
+    margin: 20px;
   }
 }

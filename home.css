@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  position: relative;
   font-family: 'Segoe UI', sans-serif;
   background-color: #f5f7fb;
   color: #333;
@@ -67,7 +68,7 @@ header.main-header {
 .user-area {
   display: flex;
   align-items: center;
-  font-size: 1.7vw;
+  font-size: 1rem;
   gap: 10px;
 }
 
@@ -296,7 +297,7 @@ footer div {
       font-size: 14px;
       }
 
-      body {
+      body, html {
         overflow-x: hidden;
       }
 

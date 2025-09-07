@@ -7,6 +7,7 @@
     }
 
     body {
+      position: relative;
       font-family: 'Segoe UI', sans-serif;
       background: #f9f9fc;
       display: flex;
@@ -93,8 +94,9 @@ nav a:hover::after {
     }
 
     .sidebar {
+      display: flex;
+      flex-direction: column;
       width: 240px;
-      max-width: 33vw;
       padding: 20px;
       background-color: white;
       border-right: 1px solid #eee;
@@ -110,6 +112,8 @@ nav a:hover::after {
     }
 
     .sidebar ul {
+      display: flex;
+      flex-direction: column;
       list-style: none;
       padding-left: 10px;
       font-size: 1rem;
@@ -140,7 +144,6 @@ nav a:hover::after {
       flex: 1;
       padding: 20px;
       overflow-y: auto;
-      max-width: 66vw;
       max-height: calc(100vh - 35);
     }
 
@@ -274,8 +277,12 @@ nav a:hover::after {
       html {
       font-size: 14px;
       }
+
+      html::-webkit-scrollbar  {
+        display: none;
+      }
       
-      body {
+      body, html{
         overflow-x: hidden;
       }
 
@@ -333,5 +340,32 @@ nav a:hover::after {
         opacity: 0.2;
         z-index: 8;
       }
+
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        flex-direction: row;
+        height: auto;
+        width: 100%;
+      }
+
+      .sidebar ul {
+        flex-direction: row;
+        height: 50px;
+        padding: 0;
+      }
+
+      .sidebar ul a {
+        margin: 0 10px 0 0;
+        padding: 10px 5px;
+        text-align: center;
+      }
+
+      .sidebar h2 {
+        display: none;
+      }
+
 
     }

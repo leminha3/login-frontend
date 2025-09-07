@@ -17,6 +17,7 @@ html {
   margin-left: auto;
     }
     body {
+      position: relative;
   background: #f7f9fc;
     }
 header {
@@ -262,7 +263,7 @@ nav a:hover::after {
       font-size: 14px;
     }
 
-      body {
+      body, html {
         overflow-x: hidden;
       }
 
