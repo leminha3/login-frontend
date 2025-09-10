@@ -10,7 +10,28 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
 
+/* FORM WRAPPER */
+.form-wrapper {
+  flex: 1;
+  background-color: #f5f7fb;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTAINER */
+.container {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  color: #333;
 }
 
 /* HEADER */
@@ -81,26 +102,6 @@ h1 {
   justify-content: center;
 }
 
-.guess {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  color: #333;
-  font-size: 15px;
-  font-weight: 600;
-  background-color: #f8f8f8;
-  border: 1px solid #cbcbcb;
-}
-
-.guess a {
-  text-decoration: none;
-  color: #333;
-}
-
-.guess:hover {
-  background-color: #f5f5f5;
-}
-
 .btn-google { background: #db4437; }
 .btn-fb { background: #4267B2; }
 
@@ -135,7 +136,7 @@ h1 {
   width: 100%;
   padding: 12px;
   margin-bottom: 12px;
-  background-color: #2575fc;  /* Màu xanh đơn sắc */
+  background-color: #2575fc;
   border: none;
   border-radius: 10px;
   color: white;
@@ -145,12 +146,11 @@ h1 {
   transition: transform 0.08s ease, background-color 0.3s;
 }
 .btn-main:hover {
-  background-color: #1f63d8; /* hover màu đậm hơn */
+  background-color: #1f63d8;
 }
 .btn-main:active {
   transform: scale(0.98);
 }
-
 
 /* Nút quay lại */
 .btn-back {
@@ -168,9 +168,27 @@ h1 {
 .btn-back:active {
   transform: scale(0.98);
 }
-
 .btn-back:hover {
   background: #e0e0e0;
+}
+
+/* Đăng nhập khách */
+.guess {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #f8f8f8;
+  border: 1px solid #cbcbcb;
+}
+.guess a {
+  text-decoration: none;
+  color: #333;
+}
+.guess:hover {
+  background-color: #f5f5f5;
 }
 
 /* Link phụ */
@@ -185,36 +203,17 @@ h1 {
 .links a:hover {
   text-decoration: underline;
 }
-.form-wrapper {
-  flex: 1;
-  background-color: #f5f7fb;
-  padding: 60px 20px;
-  min-height: calc(100vh - 180px); /* trừ header + footer */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Thêm shadow + bo góc cho container hiện có */
-.container {
-  background-color: #fff;
-  padding: 40px 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  width: 100%;
-  max-width: 450px;
-}
 
 /* FOOTER */
    /* footer {
   background-color: #1a73e8;
   color: white;
   padding: 30px 40px;
-  display: grid;
-  grid-template-columns: 50% 30% 20%;
-  gap: 20px;
+  display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 footer div {
@@ -222,7 +221,6 @@ footer div {
 }
 
 .footer-right a {
-
   color: white;
   text-decoration: none;
   font-size: 1.125rem;
