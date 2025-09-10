@@ -21,6 +21,7 @@ html {
   background: #f7f9fc;
     }
 header {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 20px 40px;
@@ -40,30 +41,29 @@ header {
   color: #1a73e8;
 }
 
-nav {
-  display: flex;
-}
 
     nav a {
   margin: 0 0.4vw ;
   padding: 20px;
   color: #333;
   text-decoration: none;
-    }
-    
-    nav {
+}
+
+nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  flex: 1;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-    }
+}
+
 
 nav a::after {
   content: '';
-  position: absolute;
-  bottom: 10px;
-  left: 0;
+  display: block;
   height: 2px;
   background: #1a73e8;
   transition: width 0.3s;
@@ -86,7 +86,7 @@ nav a:hover::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 40px;
+  padding: 30px 40px;
   flex-wrap: wrap;
 }
 
@@ -101,17 +101,17 @@ nav a:hover::after {
 }
 
 .hero-left p {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   margin-bottom: 30px;
   color: #555;
 }
 
 .buttons button {
   padding: 12px 24px;
-  font-size: 1rem;
-  margin: 10px 10px 10px 0;
+  font-size: 1.125rem;
+  margin: 10px 30px 10px 0;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   background-color: #1a73e8;
   color: white;
   cursor: pointer;
@@ -194,6 +194,7 @@ nav a:hover::after {
 .news-card {
   flex: 0 0 23%; /* Mỗi card chiếm khoảng 23% */
   max-width: 300px;
+  height: 50vh;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -233,20 +234,26 @@ nav a:hover::after {
   color: #888;
 }
     footer {
-      background: #1a73e8;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      padding: 30px 50px;
-      margin-top: 40px;
-    }
-    footer h3 {
-      font-size: 1.125rem;
-      margin-bottom: 10px;
-    }
-    footer p {
-      font-size: 0.8125rem;
-    }
+  background-color: #1a73e8;
+  color: white;
+  padding: 30px 40px;
+  display: grid;
+  grid-template-columns: 50% 30% 20%;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer div {
+  margin-bottom: 20px;
+}
+
+.footer-right a {
+
+  color: white;
+  text-decoration: none;
+  font-size: 1.125rem;
+}
 
     #menu-toggle {
       display: none;
@@ -270,13 +277,16 @@ nav a:hover::after {
       nav {
         align-items: flex-start;
         justify-content: flex-start;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: -250px;
+        left: auto;
+        transform: translate(0, 0); /* Reset transform */
         flex-direction: column;
         width: 250px;
         height: 100vh;
         transition: all 0.3s ease-in-out;
+        z-index: 10; /* Ensure nav overlays body content */
       }
 
       .open, .close-menu {

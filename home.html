@@ -1,122 +1,164 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mediverse - Trang chủ</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
+  <header class="main-header">
+    <div class="logo"><a href="#home">MEDIVERSE</a></div>
+    <input type="checkbox" id="menu-toggle"/>
+    <label for="menu-toggle" class="open"><i class="fa-solid fa-bars"></i></label>
+    <label for="menu-toggle" class="overlay"></label>
+    <nav class="nav-links">
+      <label for="menu-toggle" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
+      <a href="index.html">Trang chủ</a>
+      <a href="#congdong">Cộng đồng</a>
+      <a href="login.html">Hồ sơ y tế</a>
+      <a href="#tuvan">Tư vấn</a>
+      <a href="login.html">Mua thuốc</a>
+    </nav>
+    <div class="user-area">
+      <a href="#" id="loginBtn" class="login-btn">Đăng nhập / Đăng ký</a>
+      
+    </div>
+  </header>
 
-  <!-- HEADER -->
- <header class="main-header">
-  <div class="logo">MEDIVERSE</div>
-  <nav class="nav-links">
-    <a href="index.html">
-      <span class="home-icon"></span> Trang chủ
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Sức khoẻ trong tầm tay bạn</h1>
+      <p>Giải pháp y tế toàn diện, kết nối bác sĩ, bệnh nhân và cộng đồng</p>
+      <div class="buttons">
+        <a href="#khamngay"><button>Khám ngay</button></a>
+        <a href="#aichat"><button>Trò chuyện với AI</button></a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="img/doctor.png" alt="Minh họa bác sĩ và bệnh nhân">
+    </div>
+  </section>
+
+  <section class="features">
+    <a href="#congdong"><div class="feature-box">
+      <i class="fas fa-users"></i>
+      <h3>Cộng đồng</h3>
+      <p>Chia sẻ & học hỏi từ cộng đồng chăm sóc sức khoẻ</p>
+    </div></a>
+    <a href="login.html"><div class="feature-box">
+      <i class="fas fa-pills"></i>
+      <h3>Mua thuốc</h3>
+      <p>Đặt thuốc trực tuyến nhanh chóng, tiện lợi</p>
+    </div></a>
+    <a href="login.html"><div class="feature-box">
+      <i class="fas fa-file-medical"></i>
+      <h3>Hồ sơ y tế</h3>
+      <p>Quản lý bệnh án an toàn, bảo mật</p>
+    </div></a>
+    <a href="#tuvan"><div class="feature-box">
+      <i class="fas fa-comments"></i>
+      <h3>Tư vấn</h3>
+      <p>Hỗ trợ sức khoẻ từ bác sĩ 24/7</p>
+    </div></a>
+  </section>
+
+<section class="news">
+  <h2>Tin tức & Bài viết mới nhất</h2>
+  <div class="news-list">
+    
+    <a href="https://giaan115.com/5-dau-hieu-benh-tieu-duong" class="news-link">
+      <div class="news-card">
+        <img src="img/tieuduong.jpg" alt="Tiểu đường" class="news-image" />
+        <div class="image-placeholder"></div>
+        <p>5 dấu hiệu cảnh báo bệnh tiểu đường bạn không nên bỏ qua</p>
+        <span>01/08/2025</span>
+      </div>
     </a>
-  </nav>
-</header>
 
-
-  <!-- FORM CONTAINER -->
-  <div class="container">
-
-    <!-- Form Đăng nhập -->
-    <div id="loginForm" class="form">
-      <h1>Đăng nhập tài khoản</h1>
-
-      <div class="social-buttons">
-        <a href="https://login-backend-96fl.onrender.com/auth/google" class="btn-social btn-google">Google</a>
-        <a href="https://login-backend-96fl.onrender.com/auth/facebook" class="btn-social btn-fb">Facebook</a>
+    <a href="https://vbee.vn/blog/ai/ung-dung-ai-trong-y-te/?utm_source=BL&utm_medium=CPC&utm_term=Vietnam&utm_campaign=SM_GG_DU_NBR_AS_A_VN_B_UNK_UNK&gad_source=1&gad_campaignid=21793655902&gclid=Cj0KCQjw_L_FBhDmARIsAItqgt6I0l5CuzfJchz50ALGuwCKmmReJl1UpCjGMjgPlIwtR0TZiChqQksaAmhZEALw_wcB" class="news-link">
+      <div class="news-card">
+        <img src="img/AI.jpg" alt="Công nghệ AI" class="news-image" />
+        <div class="image-placeholder"></div>
+        <p>Công nghệ AI đang thay đổi ngành y như thế nào?</p>
+        <span>07/08/2025</span>
       </div>
+    </a>
 
-      <div class="or">hoặc tiếp tục với email</div>
-
-      <input type="email" class="field" id="loginEmail" placeholder="Email">
-      <input type="password" class="field" id="loginPassword" placeholder="Mật khẩu">
-      <div id="loginMsg" class="msg"></div>
-      <button class="btn-main" type="submit">Đăng nhập</button>
-
-      <div class="links">
-        <a href="#" id="forgotPassword">Quên mật khẩu?</a><br>
-        Chưa có tài khoản? <a href="#" id="createAccount">Tạo tài khoản</a>
+    <a href="https://www.zespri.com/vi-VN/blogdetail/tang-cuong-de-khang-va-suc-khoe-tinh-than-bang-vitamin-c-tu-hoa-qua?utm_source=Google&utm_medium=Paid-Search&utm_campaign=Summer_VN_Traffic&utm_content=SEM&utm_term=Not-Applicable_F_NA_Interest_SEM_Search_Text_Custom_1X1_SEM&gad_source=1" class="news-link">
+      <div class="news-card">
+        <img src="img/CD.jpg" alt="Chế độ ăn uống" class="news-image" />
+        <div class="image-placeholder"></div>
+        <p>Chế độ ăn uống giúp tăng sức đề kháng mùa dịch</p>
+        <span>08/08/2025</span>
       </div>
-    </div>
+    </a>
 
-    <!-- Form Quên mật khẩu -->
-    <div id="forgotForm" class="form" style="display:none;">
-      <h1>Đặt lại mật khẩu</h1>
-      <p class="form-desc">Nhập email của bạn và chúng tôi sẽ gửi cho bạn hướng dẫn đặt lại mật khẩu.</p>
-      <input type="email" class="field" placeholder="Your Email">
-      <button class="btn-main">Gửi liên kết đặt lại mật khẩu</button>
-      <button class="btn-back" id="backToLogin1">⬅ Quay lại</button>
-    </div>
-
-    <!-- Form Đăng ký -->
-    <div id="registerForm" class="form" style="display:none;">
-      <h1>Tạo tài khoản</h1>
-      <input type="text" class="field" id="regName" placeholder="Full Name">
-      <input type="email" class="field" id="regEmail" placeholder="Email">
-      <input type="password" class="field" id="regPassword" placeholder="Password">
-      <div id="regMsg" class="msg"></div>
-      <button class="btn-main" type="submit">Đăng kí</button>
-
-      <button class="btn-back" id="backToLogin2">⬅Quay lại</button>
-    </div>
+    <a href="https://bidv.com.vn/bidv/tin-tuc/tin-ve-bidv/ra-mat-tinh-nang-chatbot-ho-tro-khach-hang-doanh-nghiep-tren-bidv-ibank" class="news-link">
+      <div class="news-card">
+        <img src="img/TV.jpg" alt="Tư vấn" class="news-image" />
+        <div class="image-placeholder"></div>
+        <p>Mediverse ra mắt tính năng Chatbot AI hỗ trợ tư vấn 24/7</p>
+        <span>09/08/2025</span>
+      </div>
+    </a>
 
   </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-left">
-        <h3>MEDIVERSE</h3>
-        <p>Mediverse là nền tảng y tế trực tuyến giúp liên kết y bác sĩ, bệnh nhân và cộng đồng để chăm sóc sức khỏe toàn diện</p>
-      </div>
-      <div class="footer-right">
-        <p><strong>Liên hệ</strong></p>
-        <p>📞 03636363636</p>
-        <p>📧 katvodich@gmail.com</p>
-        <div class="socials">
-          <span>🌐</span>
-          <span>📘</span>
-          <span>🐦</span>
-          <span>🔗</span>
-        </div>
-      </div>
+  <footer>
+    <div class="footer-left">
+      <h3>MEDIVERSE</h3>
+      <p>
+        Mediverse là nền tảng y tế trực tuyến giúp kết nối bác sĩ, bệnh nhân và cộng đồng dễ dàng, mọi lúc, mọi nơi.
+      </p>
     </div>
-    <p class="footer-bottom">© 2025 Mediverse</p>
+    <div class="footer-center">
+      <p>📞 036363636</p>
+      <p>📧 kimlien@gmail.com</p>
+    </div>
+    <div class="footer-right">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
   </footer>
 
-  <!-- SCRIPT -->
   <script>
-    const loginForm = document.getElementById('loginForm');
-    const forgotForm = document.getElementById('forgotForm');
-    const registerForm = document.getElementById('registerForm');
-
-    document.getElementById('forgotPassword').addEventListener('click', function(e){
-      e.preventDefault();
-      loginForm.style.display = 'none';
-      forgotForm.style.display = 'block';
+    document.getElementById('loginBtn').addEventListener('click', () => {
+      window.location.href = 'login.html';
     });
 
-    document.getElementById('createAccount').addEventListener('click', function(e){
-      e.preventDefault();
-      loginForm.style.display = 'none';
-      registerForm.style.display = 'block';
+    async function loadProfile() {
+      try {
+        const res = await fetch("https://login-backend-96fl.onrender.com/profile", {
+          credentials: "include"
+        });
+        if (!res.ok) return;
+
+        const data = await res.json();
+        const user = data.user || {};
+
+        document.getElementById("pName").textContent = user.name || "Người dùng";
+        document.getElementById("avatar").src =
+          user.photos?.[0]?.value || "default-avatar.png";
+
+        document.getElementById("loginBtn").style.display = "none";
+        document.getElementById("userProfile").style.display = "flex";
+      } catch (err) {
+        console.error("Lỗi khi tải hồ sơ:", err);
+      }
+    }
+
+    document.getElementById("logoutBtn").addEventListener("click", async () => {
+      await fetch("https://login-backend-96fl.onrender.com/logout", {
+        credentials: "include"
+      });
+      location.reload();
     });
 
-    document.getElementById('backToLogin1').addEventListener('click', function(){
-      forgotForm.style.display = 'none';
-      loginForm.style.display = 'block';
-    });
-
-    document.getElementById('backToLogin2').addEventListener('click', function(){
-      registerForm.style.display = 'none';
-      loginForm.style.display = 'block';
-    });
+    loadProfile();
   </script>
-
 </body>
 </html>

@@ -5,18 +5,21 @@
 }
 
 html {
+  font-family: 'Segoe UI', sans-serif;
   font-size: 16px;
 }
 
 body {
+  overflow-x: hidden;
   position: relative;
-  font-family: 'Segoe UI', sans-serif;
+
   background-color: #f5f7fb;
   color: #333;
 }
 
 /* ==== HEADER ==== */
 header.main-header {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 20px 40px;
@@ -28,6 +31,7 @@ header.main-header {
   font-size: 1.5rem;
   font-weight: bold;
   color: #1a73e8;
+  margin-right: auto;
 }
 
 .logo a {
@@ -36,8 +40,11 @@ header.main-header {
 }
 
 .nav-links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  flex: 1;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -56,9 +63,6 @@ header.main-header {
   background: #1a73e8;
   transition: width 0.3s;
   width: 0;
-  position: absolute;
-  bottom: 10px;
-  left: 0;
 }
 
 .nav-links a:hover::after {
@@ -66,10 +70,10 @@ header.main-header {
 }
 
 .user-area {
-  display: flex;
   align-items: center;
   font-size: 1rem;
   gap: 10px;
+  margin-left: auto;
 }
 
 .login-icon {
@@ -94,7 +98,7 @@ header.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 40px;
+  padding: 30px 40px;
   flex-wrap: wrap;
 }
 
@@ -109,17 +113,18 @@ header.main-header {
 }
 
 .hero-left p {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   margin-bottom: 30px;
   color: #555;
 }
 
 .buttons button {
+  font-family: 'Segoe UI', 'sans-serif';
   padding: 12px 24px;
-  font-size: 1rem;
-  margin: 10px 10px 10px 0;
+  font-size: 1.125rem;
+  margin: 10px 30px 10px 0;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   background-color: #1a73e8;
   color: white;
   cursor: pointer;
@@ -198,6 +203,7 @@ header.main-header {
 .news-card {
   flex: 0 0 23%;       /* 4 card / hàng */
   max-width: 300px;
+  height: 50vh;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -211,6 +217,7 @@ header.main-header {
   text-decoration: none;
   color: inherit;
   transition: transform 0.3s ease;
+  text-overflow: ellipsis;
 }
 
 .news-card:hover {
@@ -251,7 +258,9 @@ footer {
   background-color: #1a73e8;
   color: white;
   padding: 30px 40px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 50% 30% 20%;
+  gap: 20px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -261,8 +270,8 @@ footer div {
 }
 
 .footer-right a {
+
   color: white;
-  margin-right: 10px;
   text-decoration: none;
   font-size: 1.125rem;
 }
@@ -275,7 +284,6 @@ footer div {
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
-  transition: background-color 0.2s;
 }
 
 .login-btn:hover {
@@ -328,9 +336,17 @@ footer div {
         right: 20px;
       }
 
+      header.main-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
       .login-btn {
         position: absolute;
         right: 60px;
+        top: 50%;
+        transform: translateY(-50%);
       }
 
       #menu-toggle:checked + .open {
@@ -361,5 +377,5 @@ footer div {
         display: grid;
         grid-template-columns: auto auto;
       }
-      
+
     }
