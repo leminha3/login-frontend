@@ -143,6 +143,11 @@ nav a:hover::after {
   padding: 20px;
   box-shadow: 1px 1px 10px #cccccc;
   border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
 }
 
 .feature-box i {
@@ -306,7 +311,7 @@ footer div {
       }
 
       .user-icon {
-        margin-right: 40px;
+        margin-right: 10px;
       }
 
       #menu-toggle:checked + .open {

@@ -156,6 +156,12 @@ header.main-header {
   box-shadow: 1px 1px 10px #cccccc;
   border-radius: 8px;
   margin: 10px 0;
+  transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+
 }
 
 .feature-box i {
@@ -347,6 +353,10 @@ footer div {
         right: 60px;
         top: 50%;
         transform: translateY(-50%);
+      }
+
+      .user-area {
+        margin-right: 10px;
       }
 
       #menu-toggle:checked + .open {
