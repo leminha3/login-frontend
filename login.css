@@ -45,7 +45,7 @@ body {
   background: #ffffff; /* màu bìa mới: sáng nhẹ, nổi bật, dễ nhìn */
   text-align: center;
   color: #333;
-  margin: 60px auto;
+  margin: 0 auto;
 }
 
 
@@ -206,7 +206,7 @@ h1 {
 }
 
 /* FOOTER */
-    footer {
+   /* footer {
   background-color: #1a73e8;
   color: white;
   padding: 30px 40px;
@@ -226,5 +226,5 @@ footer div {
   color: white;
   text-decoration: none;
   font-size: 1.125rem;
-}
+}*/
 
