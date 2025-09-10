@@ -98,12 +98,12 @@ header.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 40px;
-  flex-wrap: wrap;
+  padding: 20px 40px;
+  flex-wrap: wrap;;
 }
 
 .hero-left {
-  max-width: 500px;
+  max-width: 600px;
 }
 
 .hero-left h1 {
