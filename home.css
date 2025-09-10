@@ -312,13 +312,16 @@ footer div {
       .nav-links {
         align-items: flex-start;
         justify-content: flex-start;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: -250px;
+        left: auto;
+        transform: translate(0, 0); /* Reset transform */
         flex-direction: column;
         width: 250px;
         height: 100vh;
         transition: all 0.3s ease-in-out;
+        z-index: 10;
       }
 
       .open, .close-menu {
@@ -336,11 +339,7 @@ footer div {
         right: 20px;
       }
 
-      header.main-header {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
+
 
       .login-btn {
         position: absolute;
