@@ -186,6 +186,25 @@ h1 {
   text-decoration: underline;
 }
 
+.form-wrapper {
+  background-color: #f5f7fb;
+  padding: 60px 20px;
+  min-height: calc(100vh - 180px); /* trừ header + footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Thêm shadow + bo góc cho container hiện có */
+.container {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 450px;
+}
+
 /* FOOTER */
     footer {
   background-color: #1a73e8;
