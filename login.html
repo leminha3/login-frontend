@@ -36,6 +36,12 @@
       <input type="password" class="field" id="loginPassword" placeholder="Mật khẩu">
       <div id="loginMsg" class="msg"></div>
       <button class="btn-main" type="submit">Đăng nhập</button>
+      <!-- Popup -->
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <p>Tài khoản không tồn tại</p>
+          <button onclick="closePopup()">OK</button>
+      </div>
 
       <div class="guess"><a href="success.html">Đăng nhập với tư cách khách</a></div>
 
@@ -118,3 +124,23 @@
 
 </body>
 </html>
+<script>
+  document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // chặn gửi form thật
+
+    // Giả lập kết quả đăng nhập thất bại
+    const taiKhoanTonTai = false;
+
+    if (!taiKhoanTonTai) {
+      document.getElementById('popup').style.display = 'block';
+    }
+
+    // Nếu thành công thì có thể chuyển trang:
+    // window.location.href = "/home.html";
+  });
+
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+</script>
+
