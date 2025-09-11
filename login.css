@@ -1,4 +1,8 @@
 /* Nền trắng tổng thể */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -28,24 +32,17 @@ body {
   color: #2575fc;
 }
 
-.nav-links a {
+.logo a {
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  margin-left: 20px;
-}
-.nav-links a:hover {
   color: #2575fc;
 }
 
 /* Container */
 .container {
-  width: 380px;
+  width: 400px;
   max-width: 92vw;
   padding: 30px;
-  background: #eef2ff; /* màu bìa mới: sáng nhẹ, nổi bật, dễ nhìn */
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  background: #ffffff; /* màu bìa mới: sáng nhẹ, nổi bật, dễ nhìn */
   text-align: center;
   color: #333;
   margin: 60px auto;
@@ -84,8 +81,31 @@ h1 {
   justify-content: center;
 }
 
+.guess {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #f8f8f8;
+  border: 1px solid #cbcbcb;
+}
+
+.guess a {
+  text-decoration: none;
+  color: #333;
+}
+
+.guess:hover {
+  background-color: #f5f5f5;
+}
+
 .btn-google { background: #db4437; }
 .btn-fb { background: #4267B2; }
+
+.btn-google:hover { background: #c33d30; }
+.btn-fb:hover { background: #375a9f; }
 
 /* Hoặc với email */
 .or {
@@ -114,6 +134,7 @@ h1 {
 .btn-main {
   width: 100%;
   padding: 12px;
+  margin-bottom: 12px;
   background-color: #2575fc;  /* Màu xanh đơn sắc */
   border: none;
   border-radius: 10px;
@@ -124,7 +145,7 @@ h1 {
   transition: transform 0.08s ease, background-color 0.3s;
 }
 .btn-main:hover {
-  background-color: #1f5fd2; /* hover màu đậm hơn */
+  background-color: #1f63d8; /* hover màu đậm hơn */
 }
 .btn-main:active {
   transform: scale(0.98);
@@ -136,16 +157,20 @@ h1 {
   margin-top: 10px;
   width: 100%;
   padding: 10px;
-  background: #b9c512;
+  background: #f8f8f8;
   border: none;
   border-radius: 10px;
-  color: white;
+  color: #333;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
 }
 .btn-back:active {
   transform: scale(0.98);
+}
+
+.btn-back:hover {
+  background: #e0e0e0;
 }
 
 /* Link phụ */
@@ -162,65 +187,25 @@ h1 {
 }
 
 /* FOOTER */
-footer.footer {
-  background-color: #2575fc;
+    footer {
+  background-color: #1a73e8;
   color: white;
-  padding: 40px 20px 20px;
-  margin-top: auto;
-}
-
-.footer-content {
-  display: flex;
+  padding: 30px 40px;
+  display: grid;
+  grid-template-columns: 50% 30% 20%;
+  gap: 20px;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 1000px;
-  margin: auto;
 }
 
-.footer-left,
-.footer-right {
-  flex: 1;
-  min-width: 220px;
+footer div {
   margin-bottom: 20px;
 }
 
-.footer-left h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
+.footer-right a {
 
-.footer-left p,
-.footer-right p {
-  font-size: 14px;
-  margin: 5px 0;
-}
-
-.socials span {
-  display: inline-block;
-  margin-right: 8px;
-  font-size: 18px;
-}
-
-.footer-bottom {
-  text-align: center;
-  font-size: 13px;
-  margin-top: 20px;
-  opacity: 0.8;
-}
-.nav-links a {
+  color: white;
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 16px;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
+  font-size: 1.125rem;
 }
 
-.nav-links a:hover {
-  color: #2575fc;
-}
-
-.home-icon {
-  font-size: 18px;
-}

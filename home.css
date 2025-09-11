@@ -4,16 +4,23 @@
   box-sizing: border-box;
 }
 
-body {
+html {
   font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+
   background-color: #f5f7fb;
   color: #333;
 }
 
 /* ==== HEADER ==== */
 header.main-header {
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
   background-color: #ffffff;
@@ -21,9 +28,10 @@ header.main-header {
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #1a73e8;
+  margin-right: auto;
 }
 
 .logo a {
@@ -32,18 +40,22 @@ header.main-header {
 }
 
 .nav-links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  gap: 20px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-links a {
-  text-decoration: none;
+  margin: 0 0.4vw ;
   padding: 20px;
   color: #333;
-  font-weight: 500;
-  position: relative;
+  text-decoration: none;
 }
-
 .nav-links a::after {
   content: '';
   display: block;
@@ -51,9 +63,6 @@ header.main-header {
   background: #1a73e8;
   transition: width 0.3s;
   width: 0;
-  position: absolute;
-  bottom: 10px;
-  left: 0;
 }
 
 .nav-links a:hover::after {
@@ -61,9 +70,10 @@ header.main-header {
 }
 
 .user-area {
-  display: flex;
   align-items: center;
+  font-size: 1rem;
   gap: 10px;
+  margin-left: auto;
 }
 
 .login-icon {
@@ -88,7 +98,7 @@ header.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 40px;
+  padding: 30px 40px;
   flex-wrap: wrap;
 }
 
@@ -97,23 +107,24 @@ header.main-header {
 }
 
 .hero-left h1 {
-  font-size: 36px;
+  font-size: 2.25rem;
   margin-bottom: 20px;
   color: #1a73e8;
 }
 
 .hero-left p {
-  font-size: 18px;
+  font-size: 1.2rem;
   margin-bottom: 30px;
   color: #555;
 }
 
 .buttons button {
+  font-family: 'Segoe UI', 'sans-serif';
   padding: 12px 24px;
-  font-size: 16px;
-  margin-right: 10px;
+  font-size: 1.125rem;
+  margin: 10px 30px 10px 0;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   background-color: #1a73e8;
   color: white;
   cursor: pointer;
@@ -139,26 +150,27 @@ header.main-header {
 
 .feature-box {
   width: 250px;
-  height: 160px; /* ← Sửa lỗi gõ nhầm 16s0px */
+  height: 160px;
   text-align: center;
   padding: 20px;
   box-shadow: 1px 1px 10px #cccccc;
   border-radius: 8px;
+  margin: 10px 0;
 }
 
 .feature-box i {
-  font-size: 32px;
+  font-size: 2rem;
   color: #1a73e8;
   margin-bottom: 10px;
 }
 
 .feature-box h3 {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 10px;
 }
 
 .feature-box p {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #555;
 }
 
@@ -173,7 +185,7 @@ header.main-header {
 }
 
 .news h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 20px;
   color: #1a73e8;
 }
@@ -191,6 +203,7 @@ header.main-header {
 .news-card {
   flex: 0 0 23%;       /* 4 card / hàng */
   max-width: 300px;
+  height: 50vh;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -204,6 +217,7 @@ header.main-header {
   text-decoration: none;
   color: inherit;
   transition: transform 0.3s ease;
+  text-overflow: ellipsis;
 }
 
 .news-card:hover {
@@ -219,12 +233,13 @@ header.main-header {
 }
 
 .news-card p {
-  font-size: 14px;
+  color: #000;
+  font-size: 0.875rem;
   margin-bottom: 5px;
 }
 
 .news-card span {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #888;
 }
 .news-link {
@@ -243,7 +258,9 @@ footer {
   background-color: #1a73e8;
   color: white;
   padding: 30px 40px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 50% 30% 20%;
+  gap: 20px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -253,10 +270,10 @@ footer div {
 }
 
 .footer-right a {
+
   color: white;
-  margin-right: 10px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 /* ==== LOGIN BUTTON ==== */
@@ -267,23 +284,97 @@ footer div {
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
-  transition: background-color 0.2s;
 }
 
 .login-btn:hover {
   background-color: #0f5ed9;
 }
 
-/* ==== RESPONSIVE ==== */
-@media (max-width: 1024px) {
-  .news-card {
-    flex: 0 0 45%;
-  }
-}
+#menu-toggle {
+      display: none;
+    }
 
-@media (max-width: 600px) {
-  .news-card {
-    flex: 0 0 100%;
-  }
-}
+    .open, .close-menu {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
 
+    @media screen and (max-width: 830px) {
+      html {
+      font-size: 14px;
+      }
+
+      body, html {
+        overflow-x: hidden;
+      }
+
+      .nav-links {
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        left: auto;
+        transform: translate(0, 0); /* Reset transform */
+        flex-direction: column;
+        width: 250px;
+        height: 100vh;
+        transition: all 0.3s ease-in-out;
+        z-index: 10;
+      }
+
+      .open, .close-menu {
+        display: block;
+      }
+
+      .open {
+        position: absolute;
+        right: 20px;
+      }
+
+      .close-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+
+
+      .login-btn {
+        position: absolute;
+        right: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      #menu-toggle:checked + .open {
+        display: none;
+      }
+
+      #menu-toggle:checked ~ .nav-links {
+        right: 0;
+        background: white;
+        height: 100vh;
+        top: 0;
+        padding-top: 60px;
+        z-index: 9;
+      }
+
+      #menu-toggle:checked ~ .overlay {
+        display: block;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #616161;
+        opacity: 0.2;
+        z-index: 8;
+      }
+
+      .news-list {
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+
+    }

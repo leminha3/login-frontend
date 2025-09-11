@@ -11,7 +11,11 @@
 <body>
   <header>
     <div class="logo"><a href="success.html">MEDIVERSE</a></div>
+    <input type="checkbox" id="menu-toggle"/>
+    <label for="menu-toggle" class="open"><i class="fa-solid fa-bars"></i></label>
+    <label for="menu-toggle" class="overlay"></label>
     <nav>
+      <label for="menu-toggle" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
       <a href="success.html">Trang chủ</a>
       <a href="#congdong">Cộng đồng</a>
       <a href="user.html">Hồ sơ y tế</a>
@@ -33,7 +37,7 @@
       </div>
     </div>
     <div class="hero-right">
-      <img src="doctor.png" alt="Minh họa bác sĩ và bệnh nhân">
+      <img src="img/doctor.png" alt="Minh họa bác sĩ và bệnh nhân">
     </div>
   </section>
 
@@ -66,7 +70,7 @@
     
     <a href="https://giaan115.com/5-dau-hieu-benh-tieu-duong" class="news-link">
       <div class="news-card">
-        <img src="tieuduong.jpg" alt="Tiểu đường" class="news-image" />
+        <img src="img/tieuduong.jpg" alt="Tiểu đường" class="news-image" />
         <div class="image-placeholder"></div>
         <p>5 dấu hiệu cảnh báo bệnh tiểu đường bạn không nên bỏ qua</p>
         <span>01/08/2025</span>
@@ -75,7 +79,7 @@
 
     <a href="https://vbee.vn/blog/ai/ung-dung-ai-trong-y-te/?utm_source=BL&utm_medium=CPC&utm_term=Vietnam&utm_campaign=SM_GG_DU_NBR_AS_A_VN_B_UNK_UNK&gad_source=1&gad_campaignid=21793655902&gclid=Cj0KCQjw_L_FBhDmARIsAItqgt6I0l5CuzfJchz50ALGuwCKmmReJl1UpCjGMjgPlIwtR0TZiChqQksaAmhZEALw_wcB" class="news-link">
       <div class="news-card">
-        <img src="AI.jpg" alt="Công nghệ AI" class="news-image" />
+        <img src="img/AI.jpg" alt="Công nghệ AI" class="news-image" />
         <div class="image-placeholder"></div>
         <p>Công nghệ AI đang thay đổi ngành y như thế nào?</p>
         <span>07/08/2025</span>
@@ -84,7 +88,7 @@
 
     <a href="https://www.zespri.com/vi-VN/blogdetail/tang-cuong-de-khang-va-suc-khoe-tinh-than-bang-vitamin-c-tu-hoa-qua?utm_source=Google&utm_medium=Paid-Search&utm_campaign=Summer_VN_Traffic&utm_content=SEM&utm_term=Not-Applicable_F_NA_Interest_SEM_Search_Text_Custom_1X1_SEM&gad_source=1" class="news-link">
       <div class="news-card">
-        <img src="CD.jpg" alt="Chế độ ăn uống" class="news-image" />
+        <img src="img/CD.jpg" alt="Chế độ ăn uống" class="news-image" />
         <div class="image-placeholder"></div>
         <p>Chế độ ăn uống giúp tăng sức đề kháng mùa dịch</p>
         <span>08/08/2025</span>
@@ -93,7 +97,7 @@
 
     <a href="https://bidv.com.vn/bidv/tin-tuc/tin-ve-bidv/ra-mat-tinh-nang-chatbot-ho-tro-khach-hang-doanh-nghiep-tren-bidv-ibank" class="news-link">
       <div class="news-card">
-        <img src="TV.jpg" alt="Tư vấn" class="news-image" />
+        <img src="img/TV.jpg" alt="Tư vấn" class="news-image" />
         <div class="image-placeholder"></div>
         <p>Mediverse ra mắt tính năng Chatbot AI hỗ trợ tư vấn 24/7</p>
         <span>09/08/2025</span>
@@ -105,15 +109,20 @@
 
 
   <footer>
-    <div>
+    <div class="footer-left">
       <h3>MEDIVERSE</h3>
-      <p>Mediverse là nền tảng y tế trực tuyến giúp kết nối bác sĩ, bệnh nhân và cộng đồng để chăm sóc sức khoẻ toàn diện</p>
+      <p>
+        Mediverse là nền tảng y tế trực tuyến giúp kết nối bác sĩ, bệnh nhân và cộng đồng dễ dàng, mọi lúc, mọi nơi.
+      </p>
     </div>
-    <div>
-      <h4>Liên hệ</h4>
-      <p>📞 232848284</p>
-      <p>📧 kat@gmail.com</p>
-      <p>🌐 mediverse.vn</p>
+    <div class="footer-center">
+      <p>📞 036363636</p>
+      <p>📧 kimlien@gmail.com</p>
+    </div>
+    <div class="footer-right">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
   </footer>
 </body>

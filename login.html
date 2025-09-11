@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+ <header class="main-header">
+  <div class="logo"><a href="home.html">MEDIVERSE</a></div>
+</header>
+
+
+  <!-- FORM CONTAINER -->
+  <div class="container">
+
+    <!-- Form Đăng nhập -->
+    <div id="loginForm" class="form">
+      <h1>Đăng nhập tài khoản</h1>
+
+      <div class="social-buttons">
+        <a href="https://login-backend-96fl.onrender.com/auth/google" class="btn-social btn-google">Google</a>
+        <a href="https://login-backend-96fl.onrender.com/auth/facebook" class="btn-social btn-fb">Facebook</a>
+      </div>
+
+      <div class="or">hoặc tiếp tục với email</div>
+
+      <input type="email" class="field" id="loginEmail" placeholder="Email">
+      <input type="password" class="field" id="loginPassword" placeholder="Mật khẩu">
+      <div id="loginMsg" class="msg"></div>
+      <button class="btn-main" type="submit">Đăng nhập</button>
+
+      <div class="guess"><a href="success.html">Đăng nhập với tư cách khách</a></div>
+
+      <div class="links">
+        <a href="#" id="forgotPassword">Quên mật khẩu?</a><br>
+        Chưa có tài khoản? <a href="#" id="createAccount">Tạo tài khoản</a>
+      </div>
+    </div>
+
+    <!-- Form Quên mật khẩu -->
+    <div id="forgotForm" class="form" style="display:none;">
+      <h1>Đặt lại mật khẩu</h1>
+      <p class="form-desc">Nhập email của bạn và chúng tôi sẽ gửi cho bạn hướng dẫn đặt lại mật khẩu.</p>
+      <input type="email" class="field" placeholder="Your Email">
+      <button class="btn-main">Gửi liên kết đặt lại mật khẩu</button>
+      <button class="btn-back" id="backToLogin1">Quay lại</button>
+    </div>
+
+    <!-- Form Đăng ký -->
+    <div id="registerForm" class="form" style="display:none;">
+      <h1>Tạo tài khoản</h1>
+      <input type="text" class="field" id="regName" placeholder="Full Name">
+      <input type="email" class="field" id="regEmail" placeholder="Email">
+      <input type="password" class="field" id="regPassword" placeholder="Password">
+      <div id="regMsg" class="msg"></div>
+      <button class="btn-main" type="submit">Đăng kí</button>
+
+      <button class="btn-back" id="backToLogin2">Quay lại</button>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">
+      <h3>MEDIVERSE</h3>
+      <p>
+        Mediverse là nền tảng y tế trực tuyến giúp kết nối bác sĩ, bệnh nhân và cộng đồng dễ dàng, mọi lúc, mọi nơi.
+      </p>
+    </div>
+    <div class="footer-center">
+      <p>📞 036363636</p>
+      <p>📧 kimlien@gmail.com</p>
+    </div>
+    <div class="footer-right">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const loginForm = document.getElementById('loginForm');
+    const forgotForm = document.getElementById('forgotForm');
+    const registerForm = document.getElementById('registerForm');
+
+    document.getElementById('forgotPassword').addEventListener('click', function(e){
+      e.preventDefault();
+      loginForm.style.display = 'none';
+      forgotForm.style.display = 'block';
+    });
+
+    document.getElementById('createAccount').addEventListener('click', function(e){
+      e.preventDefault();
+      loginForm.style.display = 'none';
+      registerForm.style.display = 'block';
+    });
+
+    document.getElementById('backToLogin1').addEventListener('click', function(){
+      forgotForm.style.display = 'none';
+      loginForm.style.display = 'block';
+    });
+
+    document.getElementById('backToLogin2').addEventListener('click', function(){
+      registerForm.style.display = 'none';
+      loginForm.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
