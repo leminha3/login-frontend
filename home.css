@@ -204,6 +204,7 @@ header.main-header {
   flex: 0 0 23%;       /* 4 card / hàng */
   max-width: 300px;
   height: 50vh;
+  max-height: 270px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
