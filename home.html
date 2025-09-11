@@ -132,7 +132,7 @@
 
     async function loadProfile() {
       try {
-        const res = await fetch("https://login-backend-96fl.onrender.com/profile", {
+        const res = await fetch("https://login-backend-production-06ec.up.railway.app/profile", {
           credentials: "include"
         });
         if (!res.ok) return;
@@ -152,7 +152,7 @@
     }
 
     document.getElementById("logoutBtn").addEventListener("click", async () => {
-      await fetch("https://login-backend-96fl.onrender.com/logout", {
+      await fetch("https://login-backend-production-06ec.up.railway.app/logout", {
         credentials: "include"
       });
       location.reload();
