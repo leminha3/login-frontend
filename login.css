@@ -58,7 +58,18 @@ body {
   color: #2575fc;
 }
 
-/* FORM TIÊU ĐỀ */
+/* Container */
+.container {
+  width: 400px;
+  max-width: 92vw;
+  padding: 30px;
+  background: #ffffff; /* màu bìa mới: sáng nhẹ, nổi bật, dễ nhìn */
+  text-align: center;
+  color: #333;
+  margin: 0 auto;
+}
+
+
 h1 {
   margin-bottom: 20px;
   font-weight: 600;
@@ -194,7 +205,7 @@ h1 {
 }
 
 /* FOOTER */
-footer {
+   /* footer {
   background-color: #1a73e8;
   color: white;
   padding: 30px 40px;
