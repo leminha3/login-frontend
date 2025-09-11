@@ -321,7 +321,7 @@ footer div {
         flex-direction: column;
         width: 250px;
         height: 100vh;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.2s ease-in-out;
         z-index: 10;
       }
 
@@ -377,5 +377,25 @@ footer div {
         display: grid;
         grid-template-columns: auto auto;
       }
+
+      .footer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+      }
+
+      .footer-left {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+      }
+
+      .footer-center {
+    grid-column: 1 / 2;   /* Second row, first column */
+    grid-row: 2 / 3;
+  }
+
+  .footer-right {
+    grid-column: 2 / 3;   /* Second row, second column */
+    grid-row: 2 / 3;
+  }
 
     }
